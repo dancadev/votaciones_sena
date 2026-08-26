@@ -1,0 +1,26 @@
+# Entorno virtual de Python
+env/
+venv/
+ENV/
+
+# Base de datos local de SQLite (si existiera)
+*.sqlite3
+
+# Archivos compilados de Python y cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de medios subidos (opcional, para no subir imágenes locales de prueba)
+backend/media/*
+!backend/media/.gitkeep
+
+# Node / React
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+
+# Archivos del sistema operativo y editores
+.DS_Store
+.vscode/
+.idea/

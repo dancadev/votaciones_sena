@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sena-green: #39A900;
+  --color-sena-navy: #00324D;
+  --color-sena-blue: #0072B1;
+  --color-sena-bg: #F4F6F8;
+  --color-sena-text: #1E293B;
+}
+
+body {
+  background-color: var(--color-sena-bg);
+  color: var(--color-sena-text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
