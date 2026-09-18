@@ -8,8 +8,8 @@ class EstadoElectoral(models.Model):
         verbose_name = "Estado de la Elección"
 
 class Candidato(models.Model):
-    nombre = models.CharField(max_length=120)
-    numero_tarjeton = models.PositiveIntegerField(unique=True) # 1, 2, 3 o 0 para Voto en Blanco
+    nombre = models.CharField(max_length=120, blank=True)
+    numero_tarjeton = models.PositiveIntegerField(unique=True) # 1, 2, 3, 4... para candidatos
     propuesta = models.TextField(blank=True)
     foto = models.ImageField(upload_to='candidatos/', null=True, blank=True)
     es_voto_blanco = models.BooleanField(default=False)
@@ -17,8 +17,13 @@ class Candidato(models.Model):
     class Meta:
         ordering = ['numero_tarjeton']
 
+    @property
+    def esta_configurado(self):
+        """True cuando el cupo del tarjetón ya tiene un candidato registrado."""
+        return self.es_voto_blanco or bool(self.nombre.strip())
+
     def __str__(self):
-        return f"#{self.numero_tarjeton} - {self.nombre}"
+        return f"#{self.numero_tarjeton} - {self.nombre or 'CUPO DISPONIBLE'}"
 
 class Voto(models.Model):
     candidato = models.ForeignKey(Candidato, on_delete=models.PROTECT, related_name='votos')

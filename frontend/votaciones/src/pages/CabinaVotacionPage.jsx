@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { CardCandidato } from '../components/votacion/CardCandidato';
-import { getCandidatos, registrarVoto, getEstadoJornada } from '../services/api';
+import { ModalConfirmacionVoto } from '../components/votacion/ModalConfirmacionVoto';
+import { getCandidatos, getEstadoJornada } from '../services/api';
 
 export const CabinaVotacionPage = () => {
   const [candidatos, setCandidatos] = useState([]);
@@ -8,22 +9,21 @@ export const CabinaVotacionPage = () => {
   const [candidatoSeleccionado, setCandidatoSeleccionado] = useState(null);
   const [votoEnviado, setVotoEnviado] = useState(false);
 
-  useEffect(() => {
-    // Cargar estado de la elección y lista de candidatos
-    getEstadoJornada().then(res => setJornadaActiva(res.data.is_activa));
-    getCandidatos().then(res => setCandidatos(res.data));
+  const cargarDatos = useCallback(async () => {
+    try {
+      const [estado, lista] = await Promise.all([getEstadoJornada(), getCandidatos()]);
+      setJornadaActiva(estado.data.is_activa);
+      setCandidatos(lista.data);
+    } catch {
+      // La cabina mantiene su estado por defecto y el error se reporta al votar.
+    }
   }, []);
 
-  const handleVotar = async () => {
-    if (!candidatoSeleccionado) return;
-    try {
-      await registrarVoto(candidatoSeleccionado.id);
-      setVotoEnviado(true);
-      setCandidatoSeleccionado(null);
-    } catch (error) {
-      alert("Error al registrar el voto");
-    }
-  };
+  useEffect(() => {
+    // Se difiere el arranque para no actualizar estado de forma sincrónica
+    // dentro del propio efecto.
+    queueMicrotask(cargarDatos);
+  }, [cargarDatos]);
 
   if (!jornadaActiva) {
     return (
@@ -60,41 +60,24 @@ export const CabinaVotacionPage = () => {
         <p className="mt-2 text-slate-600">Selecciona el candidato de tu preferencia o el voto en blanco</p>
       </header>
 
-      <div className="mx-auto max-w-5xl grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-6">
         {candidatos.map((cand) => (
           <CardCandidato 
             key={cand.id} 
             candidato={cand} 
-            onSeleccionar={(cand) => setCandidatoSeleccionado(cand)} 
+            onSeleccionar={setCandidatoSeleccionado} 
           />
         ))}
       </div>
 
-      {/* Modal de Confirmación */}
-      {candidatoSeleccionado && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-          <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl">
-            <h3 className="text-xl font-bold text-sena-navy">Confirmar Voto</h3>
-            <p className="mt-2 text-slate-600">
-              ¿Estás seguro de votar por <strong className="text-sena-navy">{candidatoSeleccionado.nombre}</strong>?
-            </p>
-            <div className="mt-6 flex justify-end gap-3">
-              <button 
-                onClick={() => setCandidatoSeleccionado(null)} 
-                className="rounded-xl px-4 py-2 font-medium text-slate-600 hover:bg-slate-100"
-              >
-                Cancelar
-              </button>
-              <button 
-                onClick={handleVotar} 
-                className="rounded-xl bg-sena-green px-5 py-2 font-semibold text-white hover:opacity-90"
-              >
-                Confirmar
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      <ModalConfirmacionVoto
+        candidato={candidatoSeleccionado}
+        onCerrar={() => setCandidatoSeleccionado(null)}
+        onRegistrado={() => {
+          setCandidatoSeleccionado(null);
+          setVotoEnviado(true);
+        }}
+      />
     </div>
   );
 };

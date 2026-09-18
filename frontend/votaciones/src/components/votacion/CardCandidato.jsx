@@ -1,57 +1,97 @@
-import React from 'react';
-const getFotoUrl = (fotoPath) => {
-  if (!fotoPath) return null;
-  if (fotoPath.startsWith('http')) return fotoPath;
-  return `http://127.0.0.1:8000${fotoPath}`;
-};
+import { CircleUserRound } from 'lucide-react';
+import { esCupoDisponible, getEtiquetaTarjeton, getFotoUrl, getNombreVisible } from '../../utils/candidatos';
 
-export const CardCandidato = ({ candidato, onSeleccionar }) => {
-  const isBlanco = candidato.es_voto_blanco;
+/**
+ * Tarjeta del tarjetón electoral (cabina de votación).
+ *
+ * Los cupos del tarjetón que aún no tienen candidato registrado se muestran
+ * deshabilitados: no se puede votar por ellos.
+ */
+export const CardCandidato = ({ candidato, onSeleccionar, votacionHabilitada = true }) => {
+  const esBlanco = candidato.es_voto_blanco;
+  const cupoDisponible = esCupoDisponible(candidato);
+  const propuesta = candidato.propuesta?.trim();
+  const puedeVotar = votacionHabilitada && !cupoDisponible;
 
   return (
-    <div 
-      onClick={() => onSeleccionar(candidato)}
-      className={`group relative cursor-pointer overflow-hidden rounded-2xl bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border-2 ${
-        isBlanco ? 'border-slate-300 hover:border-slate-500' : 'border-transparent hover:border-sena-green'
+    <div
+      onClick={() => puedeVotar && onSeleccionar(candidato)}
+      className={`group relative flex w-full flex-col overflow-hidden rounded-2xl bg-white p-6 shadow-md transition-all duration-300 sm:w-64 lg:w-72 ${
+        cupoDisponible
+          ? 'border-2 border-dashed border-slate-300'
+          : `border-2 border-transparent ${
+              esBlanco ? 'hover:border-slate-500' : 'hover:border-sena-green'
+            } ${puedeVotar ? 'cursor-pointer hover:-translate-y-1 hover:shadow-xl' : ''}`
       }`}
     >
       {/* Badge Número Tarjetón */}
-      <div className={`absolute top-4 right-4 flex h-10 w-10 items-center justify-center rounded-full font-bold text-white shadow-sm ${
-        isBlanco ? 'bg-slate-600' : 'bg-sena-navy group-hover:bg-sena-green'
-      }`}>
-        {isBlanco ? 'VB' : `#${candidato.numero_tarjeton}`}
+      <div
+        className={`absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold text-white shadow-sm ${
+          esBlanco || cupoDisponible ? 'bg-slate-600' : 'bg-sena-navy group-hover:bg-sena-green'
+        }`}
+      >
+        {getEtiquetaTarjeton(candidato)}
       </div>
 
       {/* Imagen o Icono */}
       <div className="mb-4 flex justify-center">
         {candidato.foto ? (
-          <img 
-            src={getFotoUrl(candidato.foto)} 
-            alt={candidato.nombre} 
-            className="h-36 w-36 rounded-full object-cover ring-4 ring-sena-bg group-hover:ring-sena-green"
+          <img
+            src={getFotoUrl(candidato.foto)}
+            alt={getNombreVisible(candidato)}
+            className={`h-32 w-32 rounded-full object-cover ring-4 ring-sena-bg ${
+              esBlanco ? 'group-hover:ring-slate-400' : 'group-hover:ring-sena-green'
+            }`}
           />
         ) : (
-          <div className="flex h-36 w-36 items-center justify-center rounded-full bg-sena-bg text-slate-400 font-medium">
-            Sin Foto
+          <div
+            className={`flex h-32 w-32 flex-col items-center justify-center gap-1 rounded-full ring-4 ring-sena-bg ${
+              esBlanco ? 'bg-slate-200 text-slate-500' : 'bg-white text-slate-400'
+            }`}
+          >
+            {esBlanco ? (
+              <span className="text-2xl font-black text-slate-500">VB</span>
+            ) : (
+              <>
+                <CircleUserRound className="h-9 w-9" strokeWidth={1.4} />
+                <span className="text-[10px] font-semibold uppercase tracking-wide">Disponible</span>
+              </>
+            )}
           </div>
         )}
       </div>
 
       {/* Datos del Candidato */}
-      <div className="text-center">
-        <h3 className="text-xl font-bold text-sena-navy group-hover:text-sena-green transition-colors">
-          {candidato.nombre}
+      <div className="flex-1 text-center">
+        <h3
+          className={`text-lg font-bold leading-tight transition-colors ${
+            cupoDisponible
+              ? 'text-slate-400'
+              : 'text-sena-navy group-hover:text-sena-green'
+          }`}
+        >
+          {getNombreVisible(candidato)}
         </h3>
-        {candidato.propuesta && (
-          <p className="mt-2 text-sm text-slate-600 line-clamp-2">
-            {candidato.propuesta}
+        {propuesta ? (
+          <p className="mt-2 line-clamp-2 text-sm text-slate-600">{propuesta}</p>
+        ) : (
+          <p className="mt-2 text-sm italic text-slate-400">
+            {cupoDisponible ? 'Pendiente por asignar.' : 'Sin propuesta registrada.'}
           </p>
         )}
       </div>
 
       {/* Botón Seleccionar */}
-      <button className="mt-6 w-full rounded-xl bg-sena-navy py-3 text-sm font-semibold text-white shadow-sm transition-colors group-hover:bg-sena-green">
-        Votar
+      <button
+        type="button"
+        disabled={!puedeVotar}
+        className={`mt-6 w-full rounded-xl py-3 text-sm font-semibold text-white shadow-sm transition-colors ${
+          puedeVotar
+            ? 'bg-sena-navy group-hover:bg-sena-green'
+            : 'cursor-not-allowed bg-slate-300'
+        }`}
+      >
+        {cupoDisponible ? 'No disponible' : 'Votar'}
       </button>
     </div>
   );

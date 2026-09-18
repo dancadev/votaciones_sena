@@ -3,10 +3,11 @@ from .models import Candidato, EstadoElectoral, Voto
 
 class CandidatoSerializer(serializers.ModelSerializer):
     foto = serializers.SerializerMethodField()
+    esta_configurado = serializers.BooleanField(read_only=True)
 
     class Meta:
         model = Candidato
-        fields = ['id', 'nombre', 'numero_tarjeton', 'propuesta', 'foto', 'es_voto_blanco']
+        fields = ['id', 'nombre', 'numero_tarjeton', 'propuesta', 'foto', 'es_voto_blanco', 'esta_configurado']
 
     def get_foto(self, obj):
         if obj.foto:

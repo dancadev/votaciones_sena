@@ -7,6 +7,7 @@ const API = axios.create({
 export const buscarVotante = (documento) => API.post('/votantes/buscar/', { documento });
 export const registrarIngresoVotante = (documento) => API.post('/votantes/ingreso/', { documento });
 export const getCandidatos = () => API.get('/elecciones/candidatos/');
+export const getPropuestas = () => API.get('/elecciones/propuestas/');
 export const registrarVoto = (candidatoId) => API.post('/elecciones/votar/', { candidato_id: candidatoId });
 export const getEstadoJornada = () => API.get('/elecciones/estado/');
 export const getTotalVotosRealtime = () => API.get('/elecciones/total-realtime/');

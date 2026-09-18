@@ -23,12 +23,15 @@ export const Navbar = () => {
         </div>
 
         {/* Enlaces de Rutas */}
-        <div className="flex gap-2">
+        <div className="flex flex-wrap justify-end gap-2">
           <NavLink to="/" className={linkStyles}>
             Ingreso
           </NavLink>
           <NavLink to="/votacion" className={linkStyles}>
             Cabina de Voto
+          </NavLink>
+          <NavLink to="/propuestas" className={linkStyles}>
+            Propuestas
           </NavLink>
           <NavLink to="/monitor" className={linkStyles}>
             En Vivo

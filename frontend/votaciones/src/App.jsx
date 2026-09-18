@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/common/Navbar';
 import { RegistroIngresoPage } from './pages/RegistroIngresoPage';
 import { CabinaVotacionPage } from './pages/CabinaVotacionPage';
+import { PropuestasPage } from './pages/PropuestasPage';
 import { MonitorRealTimePage } from './pages/MonitorRealTimePage';
 import { ResultadosElectoralesPage } from './pages/ResultadosElectoralesPage';
 
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<RegistroIngresoPage />} />
             <Route path="/votacion" element={<CabinaVotacionPage />} />
+            <Route path="/propuestas" element={<PropuestasPage />} />
             <Route path="/monitor" element={<MonitorRealTimePage />} />
             <Route path="/resultados" element={<ResultadosElectoralesPage />} />
           </Routes>
