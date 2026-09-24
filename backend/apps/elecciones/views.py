@@ -1,106 +1,355 @@
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
-from rest_framework import status
+"""API de elecciones.
+
+Reglas de acceso:
+
+* **Público** (propuestas y micrositios): siempre habilitado, sin importar el
+  estado de la jornada.
+* **Administrador**: monitor en vivo, cierre de jornada, publicación de
+  resultados y todas las cifras antes del cierre.
+* **Votantes y administradores**: resultados, solo cuando el administrador
+  cerró la jornada y habilitó su publicación después de la hora límite.
+
+El voto es secreto: se guarda el sufragio sin asociarlo al votante, y por
+separado se marca a la persona como "ya votó" para impedir el doble voto.
+"""
+
+from django.db import transaction
 from django.db.models import Count
+from django.utils import timezone
+from rest_framework import status
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
+
+from apps.votantes import tokens
+from apps.votantes.models import Votante
+
 from .models import Candidato, EstadoElectoral, Voto
+from .permissions import EsAdministrador
 from .serializers import CandidatoSerializer, EstadoElectoralSerializer
 
 
-def _obtener_estado():
+# --------------------------------------------------------------------------- #
+# Utilidades de estado
+# --------------------------------------------------------------------------- #
+
+def obtener_estado():
     estado, _ = EstadoElectoral.objects.get_or_create(id=1)
     return estado
 
 
-def _candidatos_con_votos_si_cerro(estado):
-    """Anota los votos por candidato solo si la jornada ya cerró.
+def tope_de_votacion_alcanzado(estado):
+    """True si ya pasó la hora límite configurada para votar (por defecto 4:00 p.m.)."""
+    if not estado.hora_cierre_votacion:
+        return False
+    hora_limite = timezone.localtime().replace(
+        hour=estado.hora_cierre_votacion.hour,
+        minute=estado.hora_cierre_votacion.minute,
+        second=estado.hora_cierre_votacion.second,
+        microsecond=0,
+    )
+    return timezone.localtime() >= hora_limite
 
-    Antes del cierre se devuelve la lista sin conteos para no filtrar
-    resultados parciales por la API pública.
+
+def resultados_habilitados(estado):
+    """Los resultados se consultan solo si el administrador los publicó."""
+    return estado.resultados_publicos
+
+
+def candidatos_tarjeton():
+    """Candidatos visibles del tarjetón, en orden (sin el voto en blanco).
+
+    Es lo que se muestra en el módulo de propuestas y en los micrositios, donde
+    el voto en blanco no tiene cabida porque no tiene propuesta.
     """
-    candidatos = Candidato.objects.all()
-    if not estado.is_activa:
-        candidatos = candidatos.annotate(total_votos=Count('votos'))
-    return candidatos
+    return Candidato.objects.filter(activo=True, es_voto_blanco=False)
 
+
+def voto_en_blanco():
+    """Registro del voto en blanco que se ofrece dentro de la cabina."""
+    return Candidato.objects.filter(es_voto_blanco=True, activo=True).first()
+
+
+def candidatos_para_votar():
+    """Opciones que se pueden marcar en la cabina: candidatos + voto en blanco."""
+    return Candidato.objects.filter(activo=True)
+
+
+def candidatos_para_conteo():
+    """Todos los candidatos, incluido el voto en blanco, para el escrutinio."""
+    return Candidato.objects.all()
+
+
+def datos_estado_publico(estado):
+    return {
+        'jornada_activa': estado.is_activa,
+        'hora_cierre_votacion': estado.hora_cierre_votacion,
+        'tope_de_votacion_alcanzado': tope_de_votacion_alcanzado(estado),
+        'fecha_cierre': estado.fecha_cierre,
+        'resultados_publicos': estado.resultados_publicos,
+        'resultados_habilitados': resultados_habilitados(estado),
+        'puede_cerrar_jornada': estado.is_activa and tope_de_votacion_alcanzado(estado),
+    }
+
+
+# --------------------------------------------------------------------------- #
+# Endpoints públicos
+# --------------------------------------------------------------------------- #
 
 @api_view(['GET'])
+@permission_classes([AllowAny])
 def listar_candidatos(request):
-    """Tarjetón completo: candidatos, voto en blanco y cupos aún disponibles."""
-    estado = _obtener_estado()
-    candidatos = _candidatos_con_votos_si_cerro(estado)
-    serializer = CandidatoSerializer(candidatos, many=True, context={'request': request})
+    """Tarjetón: los candidatos visibles, con su propuesta."""
+    serializer = CandidatoSerializer(candidatos_tarjeton(), many=True, context={'request': request})
     return Response(serializer.data)
 
 
 @api_view(['GET'])
-def listar_propuestas(request):
-    """Módulo de propuestas: los mismos cupos del tarjetón con su propuesta completa."""
-    estado = _obtener_estado()
-    candidatos = _candidatos_con_votos_si_cerro(estado)
-    serializer = CandidatoSerializer(candidatos, many=True, context={'request': request})
+@permission_classes([AllowAny])
+def tarjeton_votacion(request):
+    """Opciones de la cabina de votación.
 
-    data = serializer.data
-    if not estado.is_activa:
-        for item, candidato in zip(data, candidatos):
-            item['votos'] = candidato.total_votos
-
+    A diferencia del módulo de propuestas, aquí **sí** se incluye el voto en
+    blanco: es una opción válida del tarjetón y se ofrece en una casilla aparte
+    porque no tiene propuesta que consultar.
+    """
+    candidatos = list(candidatos_tarjeton())
+    blanco = voto_en_blanco()
     return Response({
-        'propuestas': data,
-        'jornada_activa': estado.is_activa,
-        'total_candidatos': sum(1 for c in candidatos if c.esta_configurado and not c.es_voto_blanco),
-        'cupos_disponibles': sum(1 for c in candidatos if not c.esta_configurado),
+        'jornada_activa': obtener_estado().is_activa,
+        'candidatos': CandidatoSerializer(candidatos, many=True, context={'request': request}).data,
+        'voto_en_blanco': (
+            CandidatoSerializer(blanco, context={'request': request}).data if blanco else None
+        ),
     })
 
 
 @api_view(['GET'])
-def estado_jornada(request):
-    estado = _obtener_estado()
-    serializer = EstadoElectoralSerializer(estado)
-    return Response(serializer.data)
+@permission_classes([AllowAny])
+def listar_propuestas(request):
+    """Módulo de propuestas: siempre habilitado y sin voto en blanco.
 
+    No depende del estado de la jornada: las propuestas se pueden consultar
+    antes, durante y después de la votación.
+    """
+    candidatos = list(candidatos_tarjeton())
+    serializer = CandidatoSerializer(candidatos, many=True, context={'request': request})
+    return Response({
+        'habilitado': True,
+        'total_candidatos': len(candidatos),
+        'propuestas': serializer.data,
+    })
+
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def detalle_candidato(request, candidato_id):
+    """Micrositio del candidato: perfil y propuesta completa."""
+    candidato = Candidato.objects.filter(id=candidato_id, activo=True, es_voto_blanco=False).first()
+    if candidato is None:
+        return Response({'error': 'Candidato no encontrado'}, status=status.HTTP_404_NOT_FOUND)
+
+    serializer = CandidatoSerializer(candidato, context={'request': request})
+    return Response({'candidato': serializer.data})
+
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def estado_jornada(request):
+    return Response(datos_estado_publico(obtener_estado()))
+
+
+# --------------------------------------------------------------------------- #
+# Votación
+# --------------------------------------------------------------------------- #
 
 @api_view(['POST'])
+@permission_classes([AllowAny])
 def registrar_voto(request):
-    estado = _obtener_estado()
+    """Registra el voto del votante cuya cédula fue validada por el administrador."""
+    estado = obtener_estado()
     if not estado.is_activa:
         return Response({'error': 'La jornada de votación está cerrada'}, status=status.HTTP_400_BAD_REQUEST)
 
-    candidato_id = request.data.get('candidato_id')
-    try:
-        candidato = Candidato.objects.get(id=candidato_id)
-    except (Candidato.DoesNotExist, ValueError, TypeError):
-        return Response({'error': 'Candidato no válido'}, status=status.HTTP_404_NOT_FOUND)
-
-    if not candidato.esta_configurado:
+    token = tokens.token_del_request(request)
+    votante_id = tokens.votante_id_del_token(token)
+    if not votante_id:
         return Response(
-            {'error': f'El cupo #{candidato.numero_tarjeton} del tarjetón aún no tiene candidato registrado'},
-            status=status.HTTP_400_BAD_REQUEST,
+            {'error': 'Debes validar tu cédula en la cabina antes de votar'},
+            status=status.HTTP_401_UNAUTHORIZED,
         )
 
-    Voto.objects.create(candidato=candidato)
-    return Response({'mensaje': 'Voto registrado exitosamente'}, status=status.HTTP_201_CREATED)
+    candidato_id = request.data.get('candidato_id')
 
+    with transaction.atomic():
+        # Se bloquea al votante para que dos peticiones simultáneas no registren
+        # dos votos de la misma persona.
+        votante = Votante.objects.select_for_update().filter(id=votante_id).first()
+        if votante is None:
+            return Response({'error': 'La sesión de votación expiró'}, status=status.HTTP_401_UNAUTHORIZED)
+
+        if votante.ya_voto:
+            return Response(
+                {'error': 'Ya registraste un voto en esta jornada'},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        if not votante.ingreso_registrado:
+            return Response(
+                {'error': 'Tu ingreso aún no ha sido validado por el administrador'},
+                status=status.HTTP_403_FORBIDDEN,
+            )
+
+        # El voto en blanco también es una opción válida del tarjetón.
+        candidato = candidatos_para_votar().filter(id=candidato_id).first()
+        if candidato is None:
+            return Response({'error': 'Candidato no válido'}, status=status.HTTP_404_NOT_FOUND)
+
+        # Voto secreto: no se guarda a qué votante corresponde.
+        Voto.objects.create(candidato=candidato)
+
+        votante.ya_voto = True
+        votante.fecha_voto = timezone.now()
+        votante.save(update_fields=['ya_voto', 'fecha_voto'])
+
+    tokens.revocar(token)
+    return Response(
+        {'mensaje': 'Voto registrado exitosamente', 'candidato': candidato.nombre},
+        status=status.HTTP_201_CREATED,
+    )
+
+
+# --------------------------------------------------------------------------- #
+# Secciones restringidas y resultados
+# --------------------------------------------------------------------------- #
 
 @api_view(['GET'])
+@permission_classes([EsAdministrador])
 def total_votos_realtime(request):
-    total = Voto.objects.count()
-    return Response({'total_votos': total})
+    """Monitor en vivo: cifras de la jornada, solo para el administrador."""
+    estado = obtener_estado()
+    return Response({
+        'total_votos': Voto.objects.count(),
+        'votantes_habilitados': Votante.objects.filter(ingreso_registrado=True).count(),
+        'votantes_pendientes': Votante.objects.filter(
+            ingreso_registrado=True, ya_voto=False
+        ).count(),
+        'padron_total': Votante.objects.count(),
+        **datos_estado_publico(estado),
+    })
 
 
 @api_view(['GET'])
+@permission_classes([AllowAny])
 def resultados_finales(request):
-    estado = _obtener_estado()
-    if estado.is_activa:
-        return Response({'error': 'Los resultados detallados solo están disponibles al cerrar las votaciones'}, status=status.HTTP_403_FORBIDDEN)
+    """Resultados del escrutinio.
 
-    candidatos = Candidato.objects.annotate(total_votos=Count('votos')).order_by('-total_votos')
+    El administrador los ve en cuanto cierra la jornada; los votantes solo
+    después de que el administrador habilite su publicación.
+    """
+    estado = obtener_estado()
+    es_administrador = bool(
+        request.user and request.user.is_authenticated and request.user.is_staff
+    )
+
+    if not es_administrador:
+        if estado.is_activa:
+            return Response(
+                {'error': 'La jornada de votación continúa activa'},
+                status=status.HTTP_403_FORBIDDEN,
+            )
+        if not resultados_habilitados(estado):
+            return Response(
+                {'error': 'El administrador aún no ha habilitado la publicación de resultados'},
+                status=status.HTTP_403_FORBIDDEN,
+            )
+
+    candidatos = candidatos_para_conteo().annotate(total_votos=Count('votos')).order_by('-total_votos')
     data = [
         {
             'id': c.id,
             'nombre': c.nombre,
             'numero_tarjeton': c.numero_tarjeton,
             'es_voto_blanco': c.es_voto_blanco,
-            'votos': c.total_votos
-        } for c in candidatos
+            'votos': c.total_votos,
+            'activo': c.activo,
+        }
+        for c in candidatos
     ]
-    return Response({'resultados': data, 'ganador': data[0] if data else None})
+    total = sum(item['votos'] for item in data)
+
+    return Response({
+        'resultados': data,
+        'ganador': next((item for item in data if not item['es_voto_blanco']), None),
+        'total_votos': total,
+        **datos_estado_publico(estado),
+    })
+
+
+@api_view(['GET', 'PATCH'])
+@permission_classes([EsAdministrador])
+def configuracion_jornada(request):
+    """Consulta y actualiza la configuración de la jornada (solo administrador)."""
+    estado = obtener_estado()
+
+    if request.method == 'PATCH':
+        if 'hora_cierre_votacion' in request.data:
+            estado.hora_cierre_votacion = request.data.get('hora_cierre_votacion') or None
+
+        if 'resultados_publicos' in request.data:
+            publicar = bool(request.data.get('resultados_publicos'))
+            if publicar and estado.is_activa:
+                return Response(
+                    {'error': 'Primero debes cerrar la jornada para publicar los resultados'},
+                    status=status.HTTP_400_BAD_REQUEST,
+                )
+            estado.resultados_publicos = publicar
+
+        estado.save()
+
+    return Response({
+        'configuracion': EstadoElectoralSerializer(estado).data,
+        **datos_estado_publico(estado),
+    })
+
+
+@api_view(['POST'])
+@permission_classes([EsAdministrador])
+def cerrar_jornada(request):
+    """Cierra la votación y publica los resultados en una sola acción."""
+    estado = obtener_estado()
+    if not estado.is_activa:
+        return Response({'error': 'La jornada ya estaba cerrada'}, status=status.HTTP_400_BAD_REQUEST)
+
+    if not tope_de_votacion_alcanzado(estado) and not request.data.get('forzar'):
+        return Response(
+            {
+                'error': (
+                    'Todavía no se alcanza la hora límite de votación '
+                    f"({estado.hora_cierre_votacion:%H:%M}). Espera a que termine la fila."
+                )
+            },
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
+    estado.is_activa = False
+    estado.fecha_cierre = timezone.now()
+    estado.resultados_publicos = True
+    estado.save(update_fields=['is_activa', 'fecha_cierre', 'resultados_publicos'])
+
+    return Response({
+        'mensaje': 'Jornada cerrada y resultados publicados',
+        **datos_estado_publico(estado),
+    })
+
+
+@api_view(['POST'])
+@permission_classes([EsAdministrador])
+def reabrir_jornada(request):
+    """Reactiva la votación (por ejemplo, si aún quedaba gente en la fila)."""
+    estado = obtener_estado()
+    estado.is_activa = True
+    estado.resultados_publicos = False
+    estado.fecha_cierre = None
+    estado.save(update_fields=['is_activa', 'resultados_publicos', 'fecha_cierre'])
+    return Response({'mensaje': 'Jornada reabierta', **datos_estado_publico(estado)})

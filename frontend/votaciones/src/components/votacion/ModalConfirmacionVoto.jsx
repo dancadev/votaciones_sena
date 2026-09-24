@@ -23,10 +23,16 @@ export const ModalConfirmacionVoto = ({ candidato, onCerrar, onRegistrado }) => 
       await registrarVoto(candidato.id);
       onRegistrado?.(candidato);
     } catch (err) {
-      setError(
-        err.response?.data?.error ||
-          'No se pudo registrar el voto. Verifica la conexión con el servidor.'
-      );
+      // Sin respuesta significa que la petición nunca llegó a la API: el
+      // servidor está apagado o no se reinició tras un cambio de configuración.
+      if (!err.response) {
+        setError(
+          'No hubo respuesta del servidor. Verifica que el backend esté encendido en ' +
+            'http://127.0.0.1:8000 y reinícialo si acabas de cambiar su configuración.',
+        );
+      } else {
+        setError(err.response.data?.error || 'No se pudo registrar el voto.');
+      }
       setEnviando(false);
     }
   };

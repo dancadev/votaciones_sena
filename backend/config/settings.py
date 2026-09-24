@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders',
     'apps.votantes',
     'apps.elecciones',
@@ -101,7 +102,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/6.1/topics/i18n/
 
-LANGUAGE_CODE = 'es-es'
+LANGUAGE_CODE = 'es-co'
 
 TIME_ZONE = 'America/Bogota'
 
@@ -126,6 +127,32 @@ MAILERS = {
 }
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+# El navegador solo envía las cabeceras que la API autoriza en el preflight.
+# `x-votante-token` es la que identifica al votante en la cabina: sin ella aquí,
+# el navegador bloquea el POST /api/elecciones/votar/ y la votación falla.
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'authorization',
+    'content-type',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+    'x-votante-token',
+]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+}
+
+# Los tokens de votante (emitidos al validar la cédula) viven poco tiempo.
+VOTANTE_TOKEN_TTL_SEGUNDOS = 60 * 60 * 4
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

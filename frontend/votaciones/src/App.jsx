@@ -1,28 +1,55 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Navbar } from './components/common/Navbar';
-import { RegistroIngresoPage } from './pages/RegistroIngresoPage';
+import { RutaAdministrador } from './components/common/RutasProtegidas';
+import { AuthProvider } from './context/AuthContext';
 import { CabinaVotacionPage } from './pages/CabinaVotacionPage';
-import { PropuestasPage } from './pages/PropuestasPage';
+import { CandidatoDetallePage } from './pages/CandidatoDetallePage';
+import { InicioPage } from './pages/InicioPage';
+import { LoginAdminPage } from './pages/LoginAdminPage';
 import { MonitorRealTimePage } from './pages/MonitorRealTimePage';
+import { PropuestasPage } from './pages/PropuestasPage';
+import { RegistroIngresoPage } from './pages/RegistroIngresoPage';
 import { ResultadosElectoralesPage } from './pages/ResultadosElectoralesPage';
 
+/**
+ * Componentes separados por perfil:
+ *
+ * * **Público**: inicio, propuestas y micrositios de los candidatos.
+ * * **Votante**: cabina de votación, habilitada tras validar la cédula.
+ * * **Administrador**: login, validación de ingreso, monitor en vivo y cierre.
+ *   Los resultados quedan disponibles para ambos perfiles cuando el
+ *   administrador los publica al cerrar la jornada.
+ */
 function App() {
   return (
-    <BrowserRouter>
-      <div className="min-h-screen bg-sena-bg flex flex-col">
-        <Navbar />
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<RegistroIngresoPage />} />
-            <Route path="/votacion" element={<CabinaVotacionPage />} />
-            <Route path="/propuestas" element={<PropuestasPage />} />
-            <Route path="/monitor" element={<MonitorRealTimePage />} />
-            <Route path="/resultados" element={<ResultadosElectoralesPage />} />
-          </Routes>
-        </main>
-      </div>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <div className="flex min-h-screen flex-col bg-sena-bg">
+          <Navbar />
+          <main className="flex-1">
+            <Routes>
+              {/* Público */}
+              <Route path="/" element={<InicioPage />} />
+              <Route path="/propuestas" element={<PropuestasPage />} />
+              <Route path="/propuestas/:id" element={<CandidatoDetallePage />} />
+
+              {/* Votante: la propia cabina valida la cédula */}
+              <Route path="/cabina" element={<CabinaVotacionPage />} />
+
+              {/* Resultados: el backend decide si el perfil puede verlos */}
+              <Route path="/resultados" element={<ResultadosElectoralesPage />} />
+
+              {/* Administrador */}
+              <Route path="/admin/login" element={<LoginAdminPage />} />
+              <Route element={<RutaAdministrador />}>
+                <Route path="/admin/ingreso" element={<RegistroIngresoPage />} />
+                <Route path="/monitor" element={<MonitorRealTimePage />} />
+              </Route>
+            </Routes>
+          </main>
+        </div>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

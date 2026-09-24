@@ -72,7 +72,11 @@ export const CardCandidato = ({ candidato, onSeleccionar, votacionHabilitada = t
         >
           {getNombreVisible(candidato)}
         </h3>
-        {propuesta ? (
+        {esBlanco ? (
+          <p className="mt-2 text-sm text-slate-500">
+            Marca esta casilla para votar en blanco.
+          </p>
+        ) : propuesta ? (
           <p className="mt-2 line-clamp-2 text-sm text-slate-600">{propuesta}</p>
         ) : (
           <p className="mt-2 text-sm italic text-slate-400">
