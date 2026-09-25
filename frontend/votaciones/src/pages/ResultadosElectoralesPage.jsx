@@ -1,8 +1,15 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BarChart3, Lock, RefreshCw } from 'lucide-react';
+import { BarChart3, Download, Lock, RefreshCw } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
-import { getResultadosFinales } from '../services/api';
+import { descargarResultadosPdf, getResultadosFinales } from '../services/api';
+
+/** Extrae el nombre del archivo que el servidor envía en Content-Disposition. */
+const nombreDelArchivo = (encabezado) => {
+  if (!encabezado) return null;
+  const coincidencia = encabezado.match(/filename="?([^";]+)"?/i);
+  return coincidencia?.[1] ?? null;
+};
 
 /**
  * Resultados del escrutinio.
@@ -11,12 +18,17 @@ import { getResultadosFinales } from '../services/api';
  * cerró la jornada y habilitó la publicación, después de la hora límite.
  * Mientras la votación siga abierta, el backend responde 403 y aquí se explica
  * por qué.
+ *
+ * El administrador puede descargar el acta en PDF en cualquier momento; los
+ * votantes solo consultan los resultados en pantalla.
  */
 export const ResultadosElectoralesPage = () => {
   const { esAdministrador } = useAuth();
   const [datos, setDatos] = useState(null);
   const [bloqueado, setBloqueado] = useState(null);
   const [cargando, setCargando] = useState(true);
+  const [descargando, setDescargando] = useState(false);
+  const [errorDescarga, setErrorDescarga] = useState(null);
 
   const cargar = useCallback(async () => {
     setCargando(true);
@@ -34,6 +46,29 @@ export const ResultadosElectoralesPage = () => {
       setCargando(false);
     }
   }, []);
+
+  const descargarPdf = async () => {
+    setDescargando(true);
+    setErrorDescarga(null);
+    try {
+      const respuesta = await descargarResultadosPdf();
+      const archivo = nombreDelArchivo(respuesta.headers['content-disposition'])
+        || 'resultados-representante-aprendices.pdf';
+
+      const url = URL.createObjectURL(new Blob([respuesta.data], { type: 'application/pdf' }));
+      const enlace = document.createElement('a');
+      enlace.href = url;
+      enlace.download = archivo;
+      document.body.appendChild(enlace);
+      enlace.click();
+      enlace.remove();
+      URL.revokeObjectURL(url);
+    } catch {
+      setErrorDescarga('No se pudo generar el PDF de resultados. Inténtalo de nuevo.');
+    } finally {
+      setDescargando(false);
+    }
+  };
 
   useEffect(() => {
     queueMicrotask(cargar);
@@ -77,12 +112,27 @@ export const ResultadosElectoralesPage = () => {
             </Link>
           </div>
           {esAdministrador && (
-            <Link
-              to="/monitor"
-              className="mt-4 inline-block text-sm font-semibold text-sena-green hover:underline"
-            >
-              Ir al monitor para cerrar la jornada
-            </Link>
+            <>
+              {/* El administrador puede descargar el acta aunque aún no esté publicada. */}
+              <button
+                type="button"
+                onClick={descargarPdf}
+                disabled={descargando}
+                className="mt-5 inline-flex items-center gap-2 rounded-xl bg-sena-green px-5 py-2.5 font-semibold text-white shadow-md transition-opacity hover:opacity-90 disabled:opacity-60"
+              >
+                <Download className="h-4 w-4" />
+                {descargando ? 'Generando PDF…' : 'Descargar resultados en PDF'}
+              </button>
+              {errorDescarga && (
+                <p className="mt-2 text-sm font-medium text-red-700">⚠️ {errorDescarga}</p>
+              )}
+              <Link
+                to="/monitor"
+                className="mt-4 block text-sm font-semibold text-sena-green hover:underline"
+              >
+                Ir al monitor para cerrar la jornada
+              </Link>
+            </>
           )}
         </div>
       </div>
@@ -106,6 +156,24 @@ export const ResultadosElectoralesPage = () => {
           <p className="mt-2 text-slate-600">
             Total de votos registrados: <strong className="text-sena-navy">{totalVotos}</strong>
           </p>
+
+          {/* El acta en PDF es exclusiva del administrador. */}
+          {esAdministrador && (
+            <div className="mt-5">
+              <button
+                type="button"
+                onClick={descargarPdf}
+                disabled={descargando}
+                className="inline-flex items-center gap-2 rounded-xl bg-sena-navy px-5 py-2.5 font-semibold text-white shadow-md transition-colors hover:bg-sena-green disabled:opacity-60"
+              >
+                <Download className="h-4 w-4" />
+                {descargando ? 'Generando PDF…' : 'Descargar resultados en PDF'}
+              </button>
+              {errorDescarga && (
+                <p className="mt-2 text-sm font-medium text-red-700">⚠️ {errorDescarga}</p>
+              )}
+            </div>
+          )}
         </header>
 
         {datos?.ganador && (

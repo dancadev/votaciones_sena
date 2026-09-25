@@ -1,0 +1,422 @@
+{
+  "titulo": "Propuesta de Gestión y Análisis Normativo de la Comunidad Aprendiz",
+  "eslogan": "Potenciar el desempeño técnico, deportivo, investigativo e inclusivo de la comunidad Lope",
+  "lema": "Bienestar • Formación • Proyección regional",
+  "vigencia": "2026",
+  "resumen": "Propuesta de gestión en tres horizontes temporales (1 a 24 meses): bienestar y pedagogía del Reglamento, acompañamiento académico preventivo, semilleros SENNOVA, transición a la educación superior y ruta de empleabilidad. Incluye un análisis del Acuerdo 009 de 2024: garantías e incentivos, y los límites del régimen disciplinario.",
+  "secciones": [
+    {
+      "numero": "1",
+      "titulo": "Presentación",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "El presente documento expone una visión integral de articulación para los aprendices del Centro Internacional de Producción Limpia Lope, en Pasto, Nariño. A través de este informe se detalla un plan estratégico estructurado por fases temporales, acompañado de un análisis técnico y legal sobre las implicaciones del Reglamento del Aprendiz SENA (Acuerdo 009 de 2024)."
+        },
+        {
+          "tipo": "destacado",
+          "etiqueta": "Estructura del documento",
+          "texto": "Dos componentes: una propuesta de acción integral organizada en tres horizontes temporales (corto, mediano y largo plazo) y un análisis detallado del Reglamento del Aprendiz, con sus avances y sus exigencias."
+        }
+      ]
+    },
+    {
+      "numero": "2",
+      "titulo": "Propósito de la candidatura",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "destacado",
+          "etiqueta": "Propósito",
+          "texto": "Potenciar el desempeño técnico, deportivo, investigativo e inclusivo de la comunidad de aprendices del Centro Lope, con una representación que conoce la norma y la aplica."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Consolidar un ambiente de formación inclusivo y de alta calidad, minimizando la deserción académica y potenciando el liderazgo regional de los aprendices en el departamento de Nariño."
+        },
+        {
+          "tipo": "secuencia",
+          "items": ["Conocer la norma", "Orientar", "Acompañar", "Gestionar", "Proyectar"]
+        }
+      ]
+    },
+    {
+      "numero": "3",
+      "titulo": "Objetivo general",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Articular una propuesta integral de gestión de la comunidad aprendiz que fortalezca el bienestar, el acompañamiento formativo, la inclusión y la proyección regional de los aprendices del Centro Lope, sustentada en el conocimiento y la correcta aplicación del Reglamento del Aprendiz (Acuerdo 009 de 2024)."
+        }
+      ]
+    },
+    {
+      "numero": "4",
+      "titulo": "Objetivos específicos",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "lista",
+          "estilo": "numeros",
+          "items": [
+            "Socializar y explicar el Acuerdo 009 de 2024 a todos los grupos de formación, garantizando el pleno conocimiento de los derechos, los deberes, las faltas y el debido proceso.",
+            "Gestionar la dotación oportuna de Elementos de Protección Personal (EPP) y la verificación de los protocolos de seguridad laboral en talleres, laboratorios y unidades productivas agropecuarias.",
+            "Activar formalmente los canales de representatividad para poblaciones vulnerables o de especial protección.",
+            "Promover el bienestar, el deporte activo, la cultura y el sentido de pertenencia institucional.",
+            "Impulsar el acompañamiento académico preventivo antes de agotar las instancias formales de sanción.",
+            "Vincular a los aprendices a los semilleros de investigación aplicada (SENNOVA) y a los proyectos de economía popular y campesina.",
+            "Facilitar la transición a la educación superior y el acceso a la etapa productiva y al empleo.",
+            "Posicionar a los aprendices del Centro Lope en escenarios regionales, nacionales e internacionales de innovación técnica, deporte y habilidades WorldSkills."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "5",
+      "titulo": "Fundamentación normativa: Acuerdo 009 de 2024",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "El Acuerdo 009 de 2024 actualiza el marco normativo del SENA adaptándolo a las realidades contemporáneas, la inclusión social y la garantía de derechos fundamentales. Toda la propuesta de gestión de esta candidatura se sustenta en él y en su correcta aplicación."
+        },
+        {
+          "tipo": "destacado",
+          "etiqueta": "Criterio de la candidatura",
+          "texto": "Conocer la norma no es un trámite: es la herramienta que permite acompañar a un aprendiz antes de que su situación escale al régimen disciplinario."
+        },
+        {
+          "tipo": "tabla",
+          "columnas": ["Materia", "Qué establece la norma", "Cómo se aplica en la propuesta"],
+          "filas": [
+            ["Enfoque pluralista, diferencial e inclusivo", "Reconoce la diversidad y crea espacios de representación y vocería obligatorios para grupos de especial protección constitucional: campesinos, comunidades NARP, indígenas, LGTBIQ+, personas con discapacidad y mujeres.", "Activación formal de canales de representatividad con voceros electos y representantes de poblaciones vulnerables (corto plazo)."],
+            ["Protección económica (uniformes)", "La imposibilidad económica para adquirir el uniforme de uso diario no podrá constituir, bajo ninguna circunstancia, impedimento o causal de negación de ingreso a las instalaciones del Centro de Formación.", "Divulgación de la garantía y acompañamiento a los aprendices que la invoquen."],
+            ["Flexibilización del reingreso", "Se flexibiliza el trámite de solicitud de reingreso (por una única vez) en casos de retiro voluntario o cancelación, permitiendo continuar la ruta formativa mediante resolución motivada del subdirector.", "Orientación normativa y acompañamiento en el trámite para evitar la deserción definitiva."],
+            ["Maternidad y parentalidad", "Garantiza el pleno respeto de los derechos de aprendices gestantes, en periodo de lactancia o licencias parentales, articulado con la Ley 2394 de 2024.", "Inclusión del enfoque de protección en el acompañamiento y en las rutas de atención."],
+            ["Violencia de género", "Establece el deber de instituir procedimientos y rutas de atención inmediata frente a situaciones de acoso sexual o violencia basada en género en los ambientes de aprendizaje.", "Divulgación de las rutas y articulación con Bienestar al Aprendiz."],
+            ["Digitalización y trámites gratuitos", "Implementa la expedición de certificaciones digitales que permiten el trámite de apostilla directa y gratuita ante la Cancillería, eliminando intermediaciones.", "Ruta integrada de empleabilidad y acompañamiento a egresados."],
+            ["Límites a las medidas preventivas", "En el componente académico solo se admiten hasta 2 llamados de atención escritos y máximo 2 planes de mejoramiento por fase. En el componente disciplinario, máximo 2 llamados de atención escritos en todo el programa y 1 solo plan de mejoramiento en la etapa lectiva. Exceder estos límites remite el expediente directamente al Comité Evaluador.", "Esquemas de acompañamiento metodológico preventivo antes de agotar las instancias formales de sanción."],
+            ["Causales de deserción", "Se tipifica la deserción por inasistencia no justificada durante 3 días consecutivos (presencial o etapa productiva), 3 encuentros en programas a distancia, o por no solicitar la reincorporación al vencimiento de un aplazamiento dentro de los 5 días hábiles siguientes.", "Monitoreo preventivo y alertas tempranas de inasistencia."],
+            ["Retiro voluntario unilateral", "El retiro voluntario sin soportes legalmente válidos (incapacidades médicas, fallos judiciales, calamidad doméstica probada o servicio militar) se clasifica como falta grave, con cancelación de matrícula y sanción de reingreso por 6 meses.", "Orientación sobre los soportes requeridos para evitar que un retiro se convierta en falta grave."],
+            ["Uso de plataformas y TIC", "Se penaliza severamente el préstamo, la transferencia o la suplantación en el uso de credenciales de plataformas virtuales (LMS, SofiaPlus, Zajuna), y el uso de redes y medios institucionales para publicar contenidos injuriosos.", "Jornadas de pedagogía del reglamento y uso responsable de los recursos institucionales."]
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "6",
+      "titulo": "Enfoque de impacto en la comunidad Lope",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "La ejecución articulada de esta propuesta busca consolidar un ambiente de formación inclusivo y de alta calidad, minimizando la deserción académica y potenciando el liderazgo regional de los aprendices en el departamento de Nariño."
+        },
+        {
+          "tipo": "destacado",
+          "etiqueta": "Impacto esperado",
+          "texto": "Un Centro donde el aprendiz conoce sus derechos, sabe a quién acudir y encuentra acompañamiento antes de que su situación se convierta en deserción."
+        }
+      ]
+    },
+    {
+      "numero": "7",
+      "titulo": "Líneas de acción por horizontes temporales",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "La propuesta de acción integral se estructura en tres horizontes temporales: corto, mediano y largo plazo. Cada uno tiene sus iniciativas y su alcance definido."
+        }
+      ]
+    },
+    {
+      "numero": "7.1",
+      "titulo": "Corto plazo (1 a 3 meses): fortalecimiento del bienestar y orientación normativa",
+      "proyecto": "Bienestar y orientación normativa",
+      "nivel": 2,
+      "bloques": [
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Socialización y pedagogía del nuevo Reglamento: realizar jornadas institucionales de inducción y talleres breves dirigidos a todos los grupos de formación sobre los derechos, deberes, faltas y procedimientos establecidos en el Acuerdo 009 de 2024, garantizando el pleno conocimiento del debido proceso.",
+            "Garantía y dotación de Elementos de Protección Personal (EPP): coordinar con la administración del Centro la dotación oportuna de EPP y la verificación de protocolos de seguridad laboral en talleres, laboratorios y unidades productivas agropecuarias propias del Centro Lope.",
+            "Activación formal de canales de representatividad: instalar mesas formales de trabajo entre la subdirección, los voceros electos de ficha y los representantes de poblaciones vulnerables o de especial protección (población campesina, mujeres, comunidades indígenas, LGTBIQ+, personas con discapacidad, entre otros) para la atención oportuna de solicitudes.",
+            "Jornadas de bienestar y deporte activo: organizar torneos relámpago, actividades culturales e integraciones comunitarias que promuevan la salud física, la permanencia en la formación profesional y el sentido de pertenencia institucional."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "7.2",
+      "titulo": "Mediano plazo (3 a 9 meses): desarrollo formativo y articulación interinstitucional",
+      "proyecto": "Desarrollo formativo y articulación",
+      "nivel": 2,
+      "bloques": [
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Estrategia de fortalecimiento académico: diseñar e implementar esquemas pedagógicos de acompañamiento metodológico preventivo antes de agotar las instancias formales de sanción (como llamados de atención o planes de mejoramiento), reduciendo significativamente los índices de deserción.",
+            "Impulso a semilleros de investigación y proyectos productivos: motivar y vincular activamente a los aprendices en los semilleros de investigación aplicada (SENNOVA) y en proyectos de la economía popular y campesina, aprovechando la infraestructura tecnológica del Centro Lope.",
+            "Redes de apoyo y transición a educación superior: realizar ferias de orientación académica y convenios de homologación que faciliten la continuidad formativa hacia carreras profesionales en instituciones de educación superior de la región de Nariño.",
+            "Fortalecimiento del Fondo Emprender y la etapa productiva: brindar asesoría especializada sobre las diferentes alternativas para el desarrollo de la etapa práctica (pasantías, proyectos productivos, monitorías y contratos de aprendizaje en la economía local)."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "7.3",
+      "titulo": "Largo plazo (9 a 24 meses): sostenibilidad, liderazgo y consolidación laboral",
+      "proyecto": "Sostenibilidad y proyección regional",
+      "nivel": 2,
+      "bloques": [
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Proyección regional e intercentros: posicionar a los aprendices del Centro Lope como referentes en escenarios y competencias regionales, nacionales e internacionales de innovación técnica, disciplinas deportivas y habilidades WorldSkills.",
+            "Ruta integrada de empleabilidad: desplegar un acompañamiento personalizado con la Agencia Pública de Empleo (APE) desde la etapa lectiva, asegurando herramientas efectivas de inserción laboral para los futuros egresados.",
+            "Consolidación de modelos de producción sostenible: transformar las iniciativas e investigaciones agrícolas y ambientales desarrolladas en las unidades del Centro en unidades de negocio autosostenibles con apoyo del emprendimiento regional."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "8",
+      "titulo": "Matriz de ejecución",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Cada iniciativa del plan tiene definido su horizonte, su acción, su responsable y su evidencia."
+        },
+        {
+          "tipo": "tabla",
+          "columnas": ["Horizonte", "Iniciativa", "Acción principal", "Responsable", "Evidencia"],
+          "filas": [
+            ["Corto plazo (1–3 meses)", "Pedagogía del Reglamento", "Jornadas de inducción y talleres sobre el Acuerdo 009 de 2024", "Representación + Bienestar y Coordinación Académica", "Actas de asistencia y material divulgado"],
+            ["Corto plazo (1–3 meses)", "Dotación de EPP", "Coordinación con la administración y verificación de protocolos de seguridad", "Representación + administración del Centro", "Registros de dotación y actas de verificación"],
+            ["Corto plazo (1–3 meses)", "Canales de representatividad", "Instalación de mesas formales con voceros y representantes de poblaciones de especial protección", "Representación + subdirección + voceros", "Actas de las mesas"],
+            ["Corto plazo (1–3 meses)", "Bienestar y deporte activo", "Torneos relámpago, actividades culturales e integraciones", "Representación + Bienestar", "Programación y registro fotográfico"],
+            ["Mediano plazo (3–9 meses)", "Acompañamiento académico preventivo", "Esquemas pedagógicos de acompañamiento antes de las instancias de sanción", "Representación + Coordinación Académica e instructores", "Registro de aprendices acompañados y casos evitados"],
+            ["Mediano plazo (3–9 meses)", "Semilleros y proyectos productivos", "Vinculación a SENNOVA y a proyectos de economía popular y campesina", "Representación + SENNOVA", "Listados de vinculación y proyectos"],
+            ["Mediano plazo (3–9 meses)", "Transición a educación superior", "Ferias de orientación académica y convenios de homologación", "Representación + área académica", "Convenios y registro de participantes"],
+            ["Mediano plazo (3–9 meses)", "Etapa productiva y Fondo Emprender", "Asesoría sobre pasantías, proyectos productivos, monitorías y contratos de aprendizaje", "Representación + APE y área de emprendimiento", "Registro de asesorías"],
+            ["Largo plazo (9–24 meses)", "Proyección regional e intercentros", "Participación en escenarios y competencias de innovación, deporte y WorldSkills", "Representación + áreas técnicas y Bienestar", "Inscripciones y resultados"],
+            ["Largo plazo (9–24 meses)", "Ruta integrada de empleabilidad", "Acompañamiento personalizado con la Agencia Pública de Empleo desde la etapa lectiva", "Representación + APE", "Registro de acompañamientos e inserción"],
+            ["Largo plazo (9–24 meses)", "Producción sostenible", "Transformación de iniciativas agrícolas y ambientales en unidades de negocio autosostenibles", "Representación + emprendimiento regional", "Proyectos en marcha y resultados"]
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "9",
+      "titulo": "Cronograma por fases",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "columnas": ["Periodo", "Fase", "Foco de trabajo"],
+          "filas": [
+            ["1 – 3 meses", "Corto plazo", "Socialización del Reglamento (Acuerdo 009 de 2024) · Dotación de EPP y protocolos de seguridad · Activación de canales de representatividad · Jornadas de bienestar y deporte"],
+            ["3 – 9 meses", "Mediano plazo", "Acompañamiento académico preventivo · Semilleros de investigación y proyectos productivos · Ferias de orientación y convenios de homologación · Asesoría en etapa productiva y Fondo Emprender"],
+            ["9 – 24 meses", "Largo plazo", "Proyección regional e intercentros (competencias y WorldSkills) · Ruta integrada de empleabilidad con la APE · Consolidación de modelos de producción sostenible"]
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "10",
+      "titulo": "Indicadores de gestión",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Número de jornadas de socialización del Acuerdo 009 de 2024 realizadas y porcentaje de grupos de formación cubiertos.",
+            "Número de fichas con dotación de EPP verificada y protocolos de seguridad revisados.",
+            "Número de mesas formales de representatividad instaladas y sesiones realizadas.",
+            "Número de jornadas de bienestar, deporte y cultura promovidas y aprendices participantes.",
+            "Número de aprendices acompañados por el esquema académico preventivo y casos que evitaron escalar al régimen disciplinario.",
+            "Número de aprendices vinculados a semilleros de investigación y proyectos productivos.",
+            "Número de ferias de orientación académica y convenios de homologación gestionados.",
+            "Número de asesorías sobre etapa productiva, Fondo Emprender y contratos de aprendizaje.",
+            "Número de participaciones en escenarios y competencias regionales, nacionales e internacionales.",
+            "Número de aprendices acompañados por la ruta de empleabilidad con la Agencia Pública de Empleo.",
+            "Variación en los índices de deserción del Centro."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "11",
+      "titulo": "Transparencia y rendición de cuentas",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "La representación informará periódicamente qué iniciativas se ejecutaron en cada horizonte temporal, qué solicitudes fueron recibidas y canalizadas, ante qué instancia se presentaron, qué respuesta se obtuvo y cuáles permanecen pendientes."
+        },
+        {
+          "tipo": "destacado",
+          "etiqueta": "Compromiso",
+          "texto": "Cada horizonte del plan tendrá su informe de avance, con lo alcanzado, lo pendiente y los ajustes necesarios."
+        }
+      ]
+    },
+    {
+      "numero": "12",
+      "titulo": "Límites y responsabilidades",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "La candidatura respeta las competencias institucionales y el debido proceso. La representación no sustituye a instructores, coordinadores, Bienestar al Aprendiz, supervisores de contratos, funcionarios administrativos ni directivos, ni interviene en decisiones del Comité Evaluador."
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "No prometer beneficios que dependan de decisiones de terceros.",
+            "No intervenir en el régimen disciplinario ni en las decisiones que corresponden al Comité Evaluador.",
+            "No presentar como decisión institucional algo que todavía sea una propuesta.",
+            "No realizar acusaciones sin evidencia.",
+            "No usar ni compartir credenciales de plataformas institucionales (LMS, SofiaPlus, Zajuna).",
+            "Solicitar autorización para actividades, espacios, horarios, publicidad y eventos dentro del Centro.",
+            "Respetar el Reglamento del Aprendiz y las reglas específicas de la elección."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "13",
+      "titulo": "Propuesta diferencial de la candidatura",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "destacado",
+          "etiqueta": "Propuesta diferencial",
+          "texto": "Una representación que conoce la norma y acompaña antes de que el caso escale: prevención en lugar de sanción."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "La diferencia de esta propuesta es el conocimiento técnico del Reglamento del Aprendiz. Conocer los límites del régimen disciplinario —cuántos llamados de atención y planes de mejoramiento admite la norma, y cuándo un caso pasa al Comité Evaluador— permite acompañar al aprendiz a tiempo y evitar que una dificultad académica termine en deserción."
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Pedagogía del Acuerdo 009 de 2024 para toda la comunidad aprendiz.",
+            "Acompañamiento académico preventivo antes de las instancias de sanción.",
+            "Canales formales de representatividad para poblaciones de especial protección.",
+            "Garantía de dotación de EPP y protocolos de seguridad en talleres y unidades productivas.",
+            "Semilleros de investigación, economía campesina y proyectos productivos.",
+            "Redes de transición a la educación superior y ruta de empleabilidad con la APE.",
+            "Proyección en competencias regionales, nacionales e internacionales y WorldSkills."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "14",
+      "titulo": "Mensaje de campaña",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Potenciar el desempeño técnico, deportivo, investigativo e inclusivo de la comunidad Lope."
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Conocer tus derechos es el primer paso para ejercerlos.",
+            "Acompañar a tiempo evita perder un aprendiz.",
+            "El Centro Lope también es tuyo."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "15",
+      "titulo": "Compromiso del candidato",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Me comprometo a ejercer la representación con respeto, responsabilidad, transparencia, participación e inclusión, aplicando el Reglamento del Aprendiz y el debido proceso. Socializaré la norma, acompañaré a los aprendices en sus trámites y dificultades, gestionaré las iniciativas de esta propuesta dentro de mis competencias y comunicaré los avances, las dificultades y los resultados."
+        },
+        {
+          "tipo": "destacado",
+          "etiqueta": "Principios de trabajo",
+          "texto": "Conocer la norma antes de actuar. Acompañar antes de sancionar. Gestionar antes de prometer. Informar antes de concluir."
+        }
+      ]
+    },
+    {
+      "numero": "16",
+      "titulo": "Análisis normativo: aspectos positivos, garantías e incentivos",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "El Acuerdo 009 de 2024 equilibra una visión progresista e inclusiva de derechos con un régimen disciplinario que exige rigurosidad académica y responsabilidad en el uso de los recursos institucionales. Estos son sus avances más significativos:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "numeros",
+          "items": [
+            "Enfoque pluralista, diferencial e inclusivo: la norma reconoce formalmente la diversidad y establece espacios de representación y vocería obligatorios para grupos de especial protección constitucional, incluyendo campesinos, comunidades NARP, indígenas, LGTBIQ+, personas con discapacidad y mujeres.",
+            "Protecciones económicas e inclusivas (uniformes): se consagra expresamente que la imposibilidad económica para adquirir el uniforme de uso diario no podrá constituir, bajo ninguna circunstancia, un impedimento o causal de negación de ingreso a las instalaciones del Centro de Formación.",
+            "Flexibilización del reingreso a la formación: se flexibiliza el procedimiento para tramitar la solicitud de reingreso (por una única vez) en casos de retiro voluntario o cancelación, permitiendo la continuidad de la ruta formativa mediante resolución motivada del subdirector.",
+            "Protección a la maternidad y parentalidad: garantiza el pleno respeto de los derechos de aprendices gestantes, en periodo de lactancia o licencias parentales, articulando la norma con las disposiciones nacionales vigentes (Ley 2394 de 2024).",
+            "Prevención y rutas contra la violencia de género: se establece el deber imperativo de instituir procedimientos y rutas de atención inmediata frente a situaciones de acoso sexual o violencia basada en género dentro de los ambientes de aprendizaje.",
+            "Digitalización y trámites gratuitos: se implementan mecanismos para expedir certificaciones digitales que permiten el trámite de apostilla directa y gratuita ante la Cancillería, eliminando intermediaciones para egresados."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "17",
+      "titulo": "Análisis normativo: límites, régimen disciplinario y retos regulatorios",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Estas son las exigencias regulatorias que demandan mayor rigor y que la comunidad aprendiz debe conocer con precisión:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "numeros",
+          "items": [
+            "Régimen de faltas y límites estrictos de medidas: el nuevo marco limita cuantitativamente las medidas preventivas. En el componente académico solo se admiten hasta 2 llamados de atención escritos y un máximo de 2 planes de mejoramiento por fase. En el componente disciplinario se limita a máximo 2 llamados de atención escritos en todo el programa y 1 solo plan de mejoramiento en la etapa lectiva. Exceder estos límites remite el expediente directamente a Comité Evaluador.",
+            "Rigor en las causales de deserción: se tipifica con mayor claridad la deserción por la inasistencia no justificada durante 3 días consecutivos (presencial o etapa productiva), 3 encuentros en programas a distancia, o por no solicitar la reincorporación al vencimiento de un aplazamiento dentro de los 5 días hábiles siguientes.",
+            "Sanciones por retiro voluntario unilateral: si un aprendiz efectúa retiro voluntario sin aportar soportes legalmente válidos (incapacidades médicas, fallos judiciales, calamidad doméstica probada o servicio militar), la conducta se clasifica como falta grave, derivando en la cancelación de matrícula y sanción de reingreso por 6 meses.",
+            "Uso responsable de plataformas tecnológicas y TIC: se penaliza de forma severa el préstamo, la transferencia o la suplantación en el uso de credenciales de plataformas virtuales (LMS, SofiaPlus, Zajuna), así como el uso de redes y medios digitales institucionales para publicar contenidos injuriosos que afecten la imagen de la comunidad o de la entidad."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "18",
+      "titulo": "Conclusión normativa",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "destacado",
+          "etiqueta": "Conclusión",
+          "texto": "El Acuerdo 009 de 2024 equilibra una visión progresista e inclusiva de derechos con un régimen disciplinario que exige rigurosidad académica y responsabilidad en el uso de los recursos institucionales."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Ese equilibrio es el punto de partida de esta candidatura: una representación que explica la norma, acompaña al aprendiz en su ruta formativa y ejerce la vocería con conocimiento técnico y respeto por el debido proceso."
+        }
+      ]
+    }
+  ]
+}

@@ -65,6 +65,7 @@ export const getUsuarioActual = () => API.get('/auth/yo/');
 export const getPropuestas = () => API.get('/elecciones/propuestas/');
 export const getTarjeton = () => API.get('/elecciones/tarjeton/');
 export const getCandidato = (id) => API.get(`/elecciones/candidatos/${id}/`);
+export const getPlanTrabajo = (id) => API.get(`/elecciones/candidatos/${id}/plan/`);
 export const getCandidatos = () => API.get('/elecciones/candidatos/');
 export const getEstadoJornada = () => API.get('/elecciones/estado/');
 
@@ -94,5 +95,9 @@ export const cerrarJornada = (forzar = false) =>
   API.post('/elecciones/cerrar-jornada/', forzar ? { forzar: true } : {});
 export const reabrirJornada = () => API.post('/elecciones/reabrir-jornada/');
 export const getResultadosFinales = () => API.get('/elecciones/resultados/');
+
+/** Descarga el acta de resultados en PDF (solo administrador). */
+export const descargarResultadosPdf = () =>
+  API.get('/elecciones/resultados/pdf/', { responseType: 'blob' });
 
 export default API;

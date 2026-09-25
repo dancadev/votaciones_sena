@@ -9,6 +9,7 @@ urlpatterns = [
     path('propuestas/', views.listar_propuestas, name='listar_propuestas'),
     path('tarjeton/', views.tarjeton_votacion, name='tarjeton_votacion'),
     path('candidatos/<int:candidato_id>/', views.detalle_candidato, name='detalle_candidato'),
+    path('candidatos/<int:candidato_id>/plan/', views.plan_trabajo_candidato, name='plan_trabajo_candidato'),
     path('candidatos/', views.listar_candidatos, name='listar_candidatos'),
     path('estado/', views.estado_jornada, name='estado_jornada'),
 
@@ -23,4 +24,5 @@ urlpatterns = [
 
     # Resultados (administrador y votantes, según publicación)
     path('resultados/', views.resultados_finales, name='resultados_finales'),
+    path('resultados/pdf/', views.resultados_pdf, name='resultados_pdf'),
 ]

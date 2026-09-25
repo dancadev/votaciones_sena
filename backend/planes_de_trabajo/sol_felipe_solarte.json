@@ -1,0 +1,745 @@
+{
+  "titulo": "Programa de Representación Estudiantil",
+  "eslogan": "Gestión participativa, transparencia comunicativa y garantía del desarrollo integral del Aprendiz",
+  "lema": "Comunicar • Integrar • Veedurar",
+  "vigencia": "2026",
+  "resumen": "Tres pilares para el Centro: un Puente de Comunicación Transparente con atención 24/7 y módulo anti-deserción (MAI-RAD), identidad y formación complementaria con Vive tu Centro Lope y Mosaico SENA, y veeduría estudiantil sobre refrigerios, ambientes e insumos.",
+  "secciones": [
+    {
+      "numero": "1",
+      "titulo": "Presentación",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Este Programa de Representación Estudiantil presenta la ruta de acción propuesta para la candidatura a Representante de Aprendices del Centro Internacional de Producción Limpia Lope, Regional Nariño. El programa se estructura en tres pilares: un puente de comunicación transparente, la identidad y apropiación institucional con formación complementaria, y la veeduría estudiantil para la garantía de derechos y la eficiencia operativa."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "La propuesta se fundamenta en el Reglamento del Aprendiz SENA y busca convertir la representación en un ejercicio permanente de escucha, comunicación bidireccional, seguimiento y rendición de cuentas, articulado con las dependencias institucionales del Centro."
+        },
+        {
+          "tipo": "destacado",
+          "etiqueta": "Ejes rectores",
+          "texto": "Los tres pilares del programa: Puente de Comunicación Transparente (PCT), Identidad, Apropiación y Formación Complementaria, y Veeduría Estudiantil, Garantía de Derechos y Eficiencia Operativa."
+        }
+      ]
+    },
+    {
+      "numero": "2",
+      "titulo": "Propósito de la candidatura",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "destacado",
+          "etiqueta": "Propósito",
+          "texto": "Gestión participativa, transparencia comunicativa y garantía del desarrollo integral del Aprendiz."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Construir una representación que elimine las barreras burocráticas y la desinformación, garantizando que cada aprendiz conozca las rutas, los beneficios y los canales institucionales, y que sus solicitudes tengan respuesta, trazabilidad y seguimiento."
+        },
+        {
+          "tipo": "secuencia",
+          "items": ["Escuchar", "Comunicar", "Canalizar", "Veedurar", "Informar"]
+        }
+      ]
+    },
+    {
+      "numero": "3",
+      "titulo": "Objetivo general",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Estructurar un sistema integral e interdisciplinario de comunicación interna que viabilice la solución oportuna de peticiones, garantice la trazabilidad de los procesos y agilice la respuesta entre todos los estamentos de la comunidad educativa, fortaleciendo la identidad institucional y ejerciendo veeduría sobre las condiciones de formación y bienestar."
+        }
+      ]
+    },
+    {
+      "numero": "4",
+      "titulo": "Objetivos específicos",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "lista",
+          "estilo": "numeros",
+          "items": [
+            "Estructurar un canal bidireccional, ágil y transparente entre los aprendices, los comités de veeduría, Bienestar al Aprendiz y la administración del Centro.",
+            "Garantizar la trazabilidad de las solicitudes mediante un sistema de radicación con código único y seguimiento en tiempo real.",
+            "Fortalecer la apropiación de la cultura SENA y dinamizar la participación en las convocatorias transversales (SENA Soft, SENNOVA, Fondo Emprender, Bienestar, Bilingüismo).",
+            "Integrar las sedes y áreas de Agro y Comercio en una identidad institucional compartida y en proyectos transversales.",
+            "Ejercer veeduría estudiantil sobre la ejecución de los recursos destinados al aprendizaje y al bienestar.",
+            "Impulsar una ruta de atención eficaz para la prevención de la deserción de la formación profesional.",
+            "Promover espacios de escucha activa, inclusión y diversidad dentro del Centro.",
+            "Informar periódicamente a los aprendices los resultados de la gestión y el estado de los casos."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "5",
+      "titulo": "Fundamentación en el Reglamento del Aprendiz",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Todas las propuestas de este programa se sustentan en el Reglamento del Aprendiz SENA. La representación no promete aquello que no puede decidir: aplica la norma y los conductos institucionales existentes."
+        },
+        {
+          "tipo": "tabla",
+          "columnas": ["Artículo", "Contenido", "Aplicación en el programa"],
+          "filas": [
+            [
+              "Art. 7 — Derechos del Aprendiz",
+              "Derecho a ser escuchado, a recibir información oportuna, veraz y clara sobre los procesos académicos y administrativos, y a hacer uso del conducto regular.",
+              "Pilar I: PCT y sus canales de información. Pilar III: puntos de escucha activa."
+            ],
+            [
+              "Art. 7 — Derecho a participar",
+              "Derecho a participar en las actividades programadas por el Centro (deportivas, culturales, recreativas y de formación complementaria).",
+              "Pilar II: programa Vive tu Centro Lope y difusión de la oferta de Bienestar."
+            ],
+            [
+              "Art. 7 — Instalaciones y herramientas",
+              "Derecho a disponer de las instalaciones, equipos y herramientas requeridos para el desarrollo del programa de formación.",
+              "Pilar III: veeduría de ambientes, insumos y conectividad."
+            ],
+            [
+              "Art. 9 — Deberes del Aprendiz",
+              "Acatar las directrices e instrucciones relativas a la formación y mantener relaciones interpersonales basadas en el respeto.",
+              "Campañas de cuidado, pertenencia y convivencia."
+            ],
+            [
+              "Art. 10 y 11 — Prohibiciones y cuidado de bienes",
+              "Velar por el uso adecuado de los ambientes de aprendizaje, laboratorios, maquinaria y zonas comunes del Centro.",
+              "Pilar II: campaña de cuidado y pertenencia."
+            ],
+            [
+              "Art. 12 — Representación de Centro",
+              "Función del Representante como interlocutor entre la comunidad de aprendices y los estamentos directivos, participando con voz en el Comité de Evaluación y Disciplina y en los comités de Bienestar.",
+              "Ejercicio de la representación y participación en comités."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "6",
+      "titulo": "Metodología de gestión",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "El programa se ejecuta con la metodología Problema — Solución — Base Legal, aplicando la norma institucional en lugar del choque, y con una postura de co-gestión propositiva."
+        },
+        {
+          "tipo": "destacado",
+          "etiqueta": "Método",
+          "texto": "Problema — Solución — Base Legal: se identifica la necesidad, se propone una salida viable y se sustenta en el Reglamento del Aprendiz."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Ejemplo de aplicación: «Sabemos que hay demoras con los insumos (Problema). No venimos a pelear, venimos a aplicar el Art. 7 Numeral 6 del Reglamento mediante mesas técnicas periódicas (Solución basada en norma)»."
+        },
+        {
+          "tipo": "destacado",
+          "etiqueta": "Postura institucional",
+          "texto": "Independencia y liderazgo respetuoso. El objetivo no es el choque, sino la co-gestión propositiva."
+        }
+      ]
+    },
+    {
+      "numero": "7",
+      "titulo": "Pilares y proyectos del programa",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "El programa se organiza en tres pilares. Cada uno cuenta con su diagnóstico institucional, su objetivo, su fundamentación normativa, su plan de acción y sus metas."
+        }
+      ]
+    },
+    {
+      "numero": "7.1",
+      "titulo": "Pilar I: Puente de Comunicación Transparente (PCT)",
+      "proyecto": "Puente de Comunicación Transparente (PCT)",
+      "nivel": 2,
+      "bloques": [
+        {
+          "tipo": "destacado",
+          "etiqueta": "Eje",
+          "texto": "Eje de Gobernanza, Transparencia e Interlocución Eficaz."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Diagnóstico institucional: se evidencia una desconexión en el flujo de información entre la Subdirección de Centro, las Coordinaciones Académicas, los Equipos de Ejecución de la Formación (instructores) y los Voceros de Ficha. Esta falta de sincronización genera desinformación, sobrecarga de solicitudes no canalizadas adecuadamente e incertidumbre sobre los procesos administrativos."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Objetivo general: estructurar un sistema integral e interdisciplinario de comunicación interna que viabilice la solución oportuna de peticiones, garantice la trazabilidad de los procesos y agilice la respuesta entre todos los estamentos de la comunidad educativa."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Fundamentación en el Reglamento del Aprendiz:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Art. 7 (Derechos del Aprendiz): derecho a ser escuchado, a recibir información oportuna, veraz y clara sobre los procesos académicos y administrativos, y a hacer uso del conducto regular.",
+            "Art. 9 (Deberes del Aprendiz): acatar las directrices e instrucciones relativas a la formación y mantener relaciones interpersonales basadas en el respeto."
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Plan de acción y herramientas:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Red de Integración de Voceros (RIV): comité de comunicación integrado por los voceros electos de cada ficha (Sede Comercial y Sede Agropecuaria) con sesiones mensuales de alineación informativa. Ya existe, por lo que se acopla de manera estratégica al diseño.",
+            "Canal Digital PCT (atención 24/7): sistema informativo de consulta rápida que centraliza calendarios de convocatorias (apoyos de sostenimiento, monitorías, Fondo Emprender), guías paso a paso para trámites administrativos (novedades de Sofia Plus, aplazamientos, traslados, retiros voluntarios) y el directorio de contactos institucionales por dependencia.",
+            "Módulo de consulta para instructores y aprendices: en los casos más especiales del Centro sobre deserción ya existe un protocolo diseñado, pero la ruta no ha sido eficaz. La intención de este módulo es el redireccionamiento de los casos, variando según la situación única de cada uno. En primera instancia el gestor puede acudir mediante este módulo; si la circunstancia es de confidencialidad para el aprendiz, él también puede acudir a este protocolo y encontrar un conducto que le ayude a no desertar de su estudio en curso."
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Propuesta de arquitectura y diseño modular: Módulo de Atención Integral y Ruta Anti-Deserción (MAI-RAD). Como especialista en desarrollo y diseño de módulos orientados a procesos institucionales, se presenta la estructuración técnica y funcional para elevar la propuesta inicial a un componente robusto, eficiente y centrado en el usuario."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "1. Definición y propósito del módulo:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Nombre del módulo: Módulo de Consulta y Canal Directo Anti-Deserción (MAI-RAD).",
+            "Propósito principal: funcionar como el punto de entrada de primera instancia para la activación de los Protocolos de la Ruta de Atención para la Prevención de la Deserción de la Formación Profesional.",
+            "Objetivo de negocio / proceso: eliminar la intermediación burocrática, garantizando un flujo directo entre instructores/aprendices y la representación/vocería, optimizando el tiempo de respuesta en situaciones de vulnerabilidad o riesgo de deserción."
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "2. Roles y perfiles de usuario:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Instructor / Vocero de Ficha (usuario emisor 1): acceso avanzado para remitir solicitudes grupales de fichas completas, alertas tempranas de inasistencia recurrente o casos especiales de formación donde el aprendiz presenta dificultades.",
+            "Aprendiz (usuario emisor 2): acceso simplificado para reportar casos individuales o grupales (situaciones socioeconómicas, de salud, académicas o de convivencia).",
+            "Representación Estudiantil (usuario receptor/gestor): panel de control centralizado para recibir, clasificar, direccionar y dar seguimiento en tiempo real a las solicitudes.",
+            "Dependencias de apoyo (pares de redireccionamiento): Bienestar al Aprendiz, Coordinación Académica, Psicoorientación, Trabajo Social y Subdirección de Centro, con acceso en modo visualización/gestión según la ruta asignada."
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "3. Flujo funcional del proceso (workflow):"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "numeros",
+          "items": [
+            "Captura y registro (primera instancia): el emisor (instructor o aprendiz) ingresa al módulo y selecciona la tipología del reporte —riesgo académico, factor socioeconómico, situación psicosocial/salud o novedad grupal de ficha— mediante un formulario inteligente con campos obligatorios dinámicos (número de ficha, aprendices impactados, descripción breve y evidencias).",
+            "Diagnóstico y triage imparcial (representación): la solicitud llega de forma inmediata a la bandeja de la representación sin pasar por filtros intermediarios y se genera un código único de seguimiento (ticket / radicado RAD-2026-XXXX).",
+            "Redireccionamiento del conducto regular: con base en el Protocolo de la Ruta de Atención para la Prevención de la Deserción, la representación remite el caso con un solo clic a la dependencia correspondiente. Ejemplo A: riesgo socioeconómico → enlace con Bienestar (apoyos de sostenimiento/alimentación). Ejemplo B: dificultad académica o metodológica → enlace con equipo pedagógico o Coordinación Académica. Ejemplo C: situación emocional o de salud mental → enlace con Psicoorientación / Salud.",
+            "Trazabilidad y cierre de caso: notificaciones automáticas (por correo o módulo) al emisor sobre los avances, con el vocero de la ficha como veedor, y registro del estado del caso: recibido, en proceso de atención, canalizado, atendido o caso resuelto."
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "4. Componentes clave del conducto:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Tablero simplificado: accesos directos tipo «Código de Pánico o Alerta Anti-Deserción» tanto en el sector agro como en comercio. Se creará un tablero común en el que se clasificarán y entregarán todos los códigos que desde cualquier teléfono celular se pueden leer, categorizados desde los códigos de acceso a actividades generales y espacios de arte (verde), cursos virtuales y complementación educativa (amarillo), hasta códigos para casos especiales, es decir, la deserción de aprendices (rojo).",
+            "Línea de emergencia (Bienestar al Aprendiz) con estado visual de las solicitudes mediante semáforo de prioridad: rojo preventivo, amarillo fuera de deserción y verde.",
+            "Módulo de remisión rápida: selector matricial del Protocolo de Atención que le indica al usuario de forma gráfica hacia dónde se dirigirá su solicitud.",
+            "Sección de garantía de confidencialidad: opción de reserva de identidad en casos sensibles (protección de datos personales y garantías para el aprendiz o instructor)."
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "5. Indicadores y métricas del módulo (KPI). Para medir el impacto de la herramienta, el módulo integrará un panel de analítica con las siguientes métricas:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Tiempo Medio de Respuesta (TMR): medición de días u horas transcurridos desde el reporte hasta la activación de la ruta.",
+            "Índice de Retención por Intervención: porcentaje de aprendices o fichas que continuaron su formación tras el reporte.",
+            "Tipología de Riesgo Recurrente: gráficas para identificar los principales motivos de deserción en el Centro de Formación."
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "6. Recomendación de implementación:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Fase 1 (piloto): socialización de la ruta de atención mediante talleres rápidos con instructores y representantes de ficha.",
+            "Fase 2 (despliegue técnico): integración del módulo dentro del portal institucional existente o como una PWA (aplicación web progresiva) de acceso rápido.",
+            "Fase 3 (retroalimentación): revisiones trimestrales de la matriz de redireccionamiento para ajustar el protocolo según las dinámicas institucionales."
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Propuesta complementaria: desarrollo del Pilar de Resolución PCT (Preparar, Comunicar, Trasladar)."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Justificación y posicionamiento estratégico: el PCT se consolida como la primera instancia operativa dentro de los pilares de resolución del Centro. Su objetivo fundamental es estructurar un canal bidireccional, ágil y transparente que conecte a la comunidad de aprendices con los comités de veeduría, Bienestar al Aprendiz y la administración, eliminando barreras burocráticas y garantizando la integración efectiva entre las sedes y áreas de Agro y Comercio."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Desglose estratégico por horizontes temporales:"
+        },
+        {
+          "tipo": "tabla",
+          "columnas": ["Horizonte", "Objetivo", "Acciones", "Impacto esperado"],
+          "filas": [
+            [
+              "Corto plazo: medio eficaz de difusión inmediata",
+              "Maximizar la visibilidad y el alcance de la información en tiempo récord.",
+              "Difusión instantánea de convocatorias y cursos de formación complementaria (virtual y presencial); notificación anticipada de la agenda diaria de actividades, talleres o eventos para el día siguiente; promoción activa de la agenda de arte, cultura y bienestar institucional.",
+              "Apertura y visibilidad en menos tiempo, garantizando que el aprendiz conozca y acceda a todos los espacios y beneficios de los que forma parte."
+            ],
+            [
+              "Mediano plazo: seguimiento a fichas y canal de gestiones",
+              "Mantener una trazabilidad constante del estado de cada ficha de formación y agilizar la resolución de novedades.",
+              "Flujo bidireccional: reporte continuo de administración hacia la ficha sobre actualizaciones, estados formativos y requerimientos institucionales; redireccionamiento estructurado de solicitudes, peticiones y requerimientos nacidos en el aula o taller hacia las dependencias administrativas competentes.",
+              "Respuestas oportunas, reducción de tiempos de espera y trazabilidad en la solución de problemas."
+            ],
+            [
+              "Largo plazo: consolidación e integración intercentros",
+              "Establecer el PCT como el canal de comunicación oficial, permanente y simplificado del Centro.",
+              "Simplificación comunicativa mediante la reducción de trámites complejos o canales informales fragmentados; consolidación de la cultura de escucha activa y respuesta administrativa; integración Agro-Comercio para unificar comunicativamente ambas áreas y generar identidad institucional compartida y sinergias en proyectos transversales.",
+              "Un canal oficial reconocido, con cultura de escucha activa y respuesta administrativa."
+            ]
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Hoja de ruta para la ejecución:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Fase de preparación (foco operativo): definición de protocolos de respuesta rápida y asignación de enlaces administrativos para atender el flujo de entrada y salida de mensajes.",
+            "Fase de despliegue de difusión: activación de los canales de salida inmediata para la agenda cultural, deportiva y formativa.",
+            "Fase de articulación por fichas: capacitación a voceros de fichas (Agro y Comercio) sobre el uso del PCT como canal oficial de solicitudes y recepción de estados."
+          ]
+        },
+        {
+          "tipo": "destacado",
+          "etiqueta": "Metas del Pilar I",
+          "texto": "Meta 1: lograr la vinculación del 99% de los voceros de las jornadas diurna, nocturna, fin de semana y virtuales a la Red de Integración. Meta 2: garantizar una tasa de respuesta o direccionamiento de solicitudes en un tiempo máximo, dependiendo del caso a tratar (el vocero y subvocero ejecutan labor de veedor). Meta 3: resolver los casos más especiales que necesitan atención oportuna y mejorar los protocolos de deserción, permitiendo conocer cuáles son los fallos que se deben solucionar."
+        }
+      ]
+    },
+    {
+      "numero": "7.2",
+      "titulo": "Pilar II: Identidad, Apropiación y Formación Complementaria",
+      "proyecto": "Vive tu Centro Lope",
+      "nivel": 2,
+      "bloques": [
+        {
+          "tipo": "destacado",
+          "etiqueta": "Eje",
+          "texto": "Eje de Desarrollo Humano Integral y Pertenencia Institucional."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Diagnóstico institucional: existe un potencial subaprovechado en la oferta de Bienestar al Aprendiz (programas culturales, deportivos, bilingüismo, habilidades blandas). Adicionalmente, el sentido de pertenencia decae cuando los aprendices perciben su paso por el SENA únicamente como un trámite académico y no como una experiencia de vida y transformación social."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Objetivo general: fortalecer la apropiación de la cultura SENA y dinamizar la participación en las convocatorias transversales (SENA Soft, SENNOVA, Fondo Emprender, Bienestar, Bilingüismo) mediante estrategias de integración interdisciplinar y uso óptimo de la infraestructura."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Programa «Vive tu Centro Lope»: espacios trimestrales de sensibilización donde las fichas de formación conocen la oferta integral disponible. Estructura de la jornada trimestral (feria de servicios prácticos):"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Frecuencia y formato: jornadas presenciales e híbridas al inicio de cada trimestre de formación.",
+            "Ruta de acceso informativo — Estación Bienestar al Aprendiz: socialización de apoyos de sostenimiento, alimentación, transporte y actividades culturales y deportivas.",
+            "Ruta de acceso informativo — Estación Contratos y Contrato de Aprendizaje: asesoría directa sobre el sistema SGVA, modalidad de etapa práctica y resolución de dudas contractuales.",
+            "Ruta de acceso informativo — Estación SENNOVA: presentación de semilleros de investigación, convocatorias y proyectos de innovación abierta.",
+            "Ruta de acceso informativo — Estación Bilingüismo: inducción guiada para el registro y uso de plataformas lingüísticas e inscripción a ambientes plurilingües.",
+            "Ruta de acceso informativo — Estación Coordinación Académica y Administración: puntos de atención para trámites, novedades de ficha y peticiones.",
+            "Punto de escucha para SENA Pluridiverso: los aprendices nuevos que buscan un espacio ideal para su desarrollo y libre expresión también contarán con un conducto que los acoja y les dé la implementación de actividades y diseño de ideas que complementen a cada uno de manera productiva."
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Otras estrategias del pilar:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Estrategia SENNOVA: impulso a proyectos de investigación aplicada e innovación.",
+            "Programa de bilingüismo: promoción activadora para plataformas institucionales y ambientes plurilingües.",
+            "Cultura y deporte: mesas de difusión para selecciones deportivas y grupos culturales del Centro."
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Metodología de ejecución y seguimiento:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Fase de preparación (semana −2 del trimestre): coordinación con los líderes de Bienestar, Contratos, SENNOVA y Bilingüismo para consolidar la oferta actualizada del trimestre.",
+            "Fase de sensibilización (semana 1 del trimestre): despliegue de la jornada «Vive tu Centro Lope» por franjas horarias (mañana, tarde y nocturna) para cubrir la totalidad de las fichas.",
+            "Fase de evaluación: encuesta de satisfacción y nivel de conocimiento de servicios al finalizar la jornada, para garantizar el cumplimiento del derecho a la información de manera clara y transparente."
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Mosaico SENA: identidad, diversidad e inserción laboral efectiva."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Objetivo: crear un entorno seguro, pedagógico y participativo donde la diversidad cultural se transforme en una ventaja competitiva para la formación profesional integral y la inserción laboral, sin pérdida de identidad."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "1. Mecanismos de escucha activa y espacios seguros:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Mesas de Diálogo Intercultural y Diverso: encuentros mensuales guiados por Bienestar al Aprendiz para escuchar necesidades específicas, saberes ancestrales e inquietudes sin sesgos institucionales.",
+            "Círculos de Palabra y Ágoras Abiertas: zonas dentro del Centro destinadas a la libre expresión pedagógica, donde cada comunidad pueda debatir y proponer ideas para sus proyectos formativos.",
+            "Ventanilla de Escucha e Inclusión: canal confidencial (físico y digital) para la atención de casos de discriminación y la garantía de derechos según el Reglamento del Aprendiz. Allí también se brindarán espacios para escuchar las diferentes situaciones que presenta cada aprendiz en medio de su etapa lectiva, entendiendo los factores que pueden estar creando una brecha entre la educación y las situaciones sociales: algunos vienen desde distancias muy lejanas y no cuentan con apoyos para transporte, entre otras condiciones. Este puente también será efectivo para la veeduría de un proceso efectivo en la integración laboral, formando desde la parte educativa a un aprendiz capaz de manejar situaciones de confrontación y, a la vez, un apoyo que le brinde la defensa de sus derechos."
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Gobernanza y participación en el Centro:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Comité Pluridiverso de Aprendices: conformación de un grupo representativo que participe con voz en las decisiones de Bienestar, uso de infraestructura y programación cultural del Centro de Formación.",
+            "Campañas de sensibilización institucional: talleres de pedagogía inclusiva para instructores y personal administrativo, orientados a erradicar estereotipos y barreras de acceso."
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "2. Integración pedagógica y proyectos formativos:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Proyectos productivos con enfoque plural: incentivo a proyectos de investigación aplicada en SENNOVA que rescaten saberes tradicionales (medicina ancestral, gastronomía local, artesanías, producción agroecológica) y adaptación de metodologías de formación respetando los ritmos de aprendizaje y cosmovisiones de cada comunidad.",
+            "Cátedra Abierta de Saberes y Tradiciones: talleres dictados por los mismos aprendices de comunidades pluridiversas para transferir sus conocimientos al resto de la comunidad educativa, promoviendo el respeto y la apropiación.",
+            "Red de Proyectos Interdisciplinarios: espacio de intercambio técnico entre el sector agropecuario y el sector comercial mediante ferias y jornadas de integración. Ejemplo: que las fichas del área comercial articulen estrategias de mercadeo y administración para los productos generados por las fichas del sector agropecuario, fomentando el trabajo colaborativo en escenarios reales.",
+            "Campaña de cuidado y pertenencia: jornadas de concientización para la conservación de los ambientes de aprendizaje, laboratorios, campos de práctica y zonas comunes. El objetivo es la apropiación de los derechos —ambientes aptos para el desarrollo de las actividades— pero también recordar los deberes: el perfil de un aprendiz SENA debe caracterizarse por marcar estándares de educación en el uso de su entorno, el cuidado de los recursos que tiene a su disposición y su optimización. Un centro «limpia» debe marcar la diferencia en cada uno de sus aprendices. Como objetivo final, esto crea conciencia social.",
+            "Promoción de talentos e incentivo a la expresión: activación de la «Feria de Habilidades y Competencias», donde los aprendices puedan exponer iniciativas innovadoras, proyectos de investigación (SENNOVA) o expresiones artísticas con reconocimiento institucional. En este espacio se busca encontrar talentos gráficos que ayuden a la composición de los recursos del SENA y que, a la vez, permitan al aprendiz complementarse y ser valioso con su habilidad para el desarrollo de recursos gráficos en el sector laboral."
+          ]
+        },
+        {
+          "tipo": "destacado",
+          "etiqueta": "Metas del Pilar II",
+          "texto": "Meta 1: incrementar en un 35% la inscripción y permanencia de aprendices en las actividades de Bienestar, Formación Complementaria y Semilleros de Investigación. Meta 2: realizar al menos 2 encuentros interdisciplinarios de integración técnica por semestre académico."
+        }
+      ]
+    },
+    {
+      "numero": "7.3",
+      "titulo": "Pilar III: Veeduría Estudiantil, Garantía de Derechos y Eficiencia Operativa",
+      "proyecto": "Mesa de Veeduría para la Eficiencia Operativa",
+      "nivel": 2,
+      "bloques": [
+        {
+          "tipo": "destacado",
+          "etiqueta": "Eje",
+          "texto": "Eje de Gestión Institucional, Continuidad Académica y Bienestar Sustentable."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Diagnóstico institucional: se presentan cuellos de botella en la contratación y programación de instructores, en la disponibilidad de materiales para la formación y en la logística de distribución del apoyo alimentario (refrigerios), lo cual impacta la calidad del proceso lectivo y productivo."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Objetivo general: realizar un seguimiento constructivo, a través de los comités, técnico y diplomático, sobre la ejecución de los recursos destinados al aprendizaje y al bienestar, asegurando condiciones dignas, equitativas e ininterrumpidas para la formación profesional integral."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Fundamentación en el Reglamento del Aprendiz:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Art. 12 (Representación de Centro): función del representante de ser interlocutor entre la comunidad de aprendices y los estamentos directivos, participando con voz en el Comité de Evaluación y Disciplina y en los comités de Bienestar.",
+            "Art. 7 (Derechos): derecho a disponer de las instalaciones, equipos y herramientas requeridos para el desarrollo del programa de formación."
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Plan de acción y herramientas:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Puntos de Escucha Activa PCT (Sede Comercial y Sede Agropecuaria): atención presencial periódica y buzón digital permanente para recepcionar novedades sobre disponibilidad de ambientes, herramientas, conectividad e instructores.",
+            "Mesa de Veeduría para la Eficiencia Operativa — Gestión alimentaria: mesas de trabajo con el área de Bienestar para evaluar la cobertura, calidad y distribución justa de los apoyos alimentarios y refrigerios producidos en el Centro, garantizando su priorización según criterios socioeconómicos.",
+            "Contingencia para el tiempo formativo: monitoreo preventivo del calendario lectivo para identificar oportunamente fichas con desprogramación de instructores o falta de ambientes de aprendizaje, tramitando soluciones antes de que se generen retrasos irrecuperables en la etapa productiva."
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "A través del sistema PCT se supervisarán las instancias adecuadas para la continuación de los procesos, anticipando de manera estratégica cada una de las necesidades de cada ficha. La implementación de los comités permitirá completar este conducto de manera positiva para su seguimiento y finalidad."
+        },
+        {
+          "tipo": "destacado",
+          "etiqueta": "Metas del Pilar III",
+          "texto": "Meta 1: consolidar e informar mensualmente a la Coordinación Académica el 100% de los reportes sobre contingencias de insumos o falta de instructores en ambientes. Meta 2: presentar informes de veeduría trimestrales ante el Comité del Centro sobre el avance de la cobertura de apoyos socioeconómicos y alimentarios."
+        }
+      ]
+    },
+    {
+      "numero": "8",
+      "titulo": "Matriz de ejecución",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Cada componente del programa tiene definido su pilar, su acción, su plazo, su responsable y su evidencia."
+        },
+        {
+          "tipo": "tabla",
+          "columnas": ["Pilar", "Acción", "Plazo", "Responsable", "Indicador", "Evidencia"],
+          "filas": [
+            ["Pilar I — PCT", "Red de Integración de Voceros (RIV)", "Sesiones mensuales", "Representación + voceros de ficha", "Voceros vinculados", "Actas de sesión y listados"],
+            ["Pilar I — PCT", "Canal Digital PCT (atención 24/7)", "Permanente", "Representación + áreas competentes", "Consultas y publicaciones", "Registro del canal"],
+            ["Pilar I — PCT", "Módulo MAI-RAD anti-deserción", "Fase 1 piloto, luego despliegue", "Representación + Bienestar, Psicoorientación y Coordinación Académica", "Casos radicados y tiempo medio de respuesta", "Tickets RAD-2026-XXXX y panel de analítica"],
+            ["Pilar I — PCT", "Tablero de códigos de alerta", "Semestral", "Representación + Bienestar", "Códigos publicados y consultas", "Tablero publicado"],
+            ["Pilar II — Vive tu Centro Lope", "Jornada trimestral de feria de servicios", "Trimestral", "Representación + Bienestar, Contratos, SENNOVA y Bilingüismo", "Aprendices asistentes y nivel de conocimiento", "Encuesta de satisfacción y registro fotográfico"],
+            ["Pilar II — Mosaico SENA", "Mesas de diálogo intercultural y ventanilla de escucha", "Mensual", "Representación + Bienestar al Aprendiz", "Encuentros realizados", "Actas y registro de casos"],
+            ["Pilar II — Mosaico SENA", "Comité Pluridiverso de Aprendices", "Semestral", "Representación + aprendices", "Participación en decisiones", "Actas del comité"],
+            ["Pilar II — Mosaico SENA", "Red de Proyectos Interdisciplinarios Agro-Comercio", "Semestral", "Representación + fichas de ambos sectores", "Encuentros de integración técnica", "Registro de ferias y jornadas"],
+            ["Pilar II — Mosaico SENA", "Feria de Habilidades y Competencias", "Semestral", "Representación + Bienestar", "Iniciativas expuestas", "Programación y evidencias"],
+            ["Pilar III — Veeduría", "Puntos de Escucha Activa PCT", "Permanente", "Representación + voceros", "Novedades recibidas", "Buzón digital y registros presenciales"],
+            ["Pilar III — Veeduría", "Mesa de veeduría de apoyos alimentarios", "Mensual", "Representación + Bienestar", "Cobertura y distribución evaluada", "Informes de veeduría"],
+            ["Pilar III — Veeduría", "Monitoreo del calendario lectivo", "Mensual", "Representación + Coordinación Académica", "Contingencias reportadas", "Reportes mensuales a Coordinación"]
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "9",
+      "titulo": "Cronograma de los primeros 100 días",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "columnas": ["Días", "Etapa", "Acciones"],
+          "filas": [
+            ["1 – 15", "Escuchar y diagnosticar", "Presentación de la representación ante las fichas · Activación de los Puntos de Escucha Activa en las sedes Comercial y Agropecuaria · Primer contacto con los voceros de ficha"],
+            ["16 – 30", "Articular", "Conformación y activación de la Red de Integración de Voceros (RIV) · Recolección y clasificación de las primeras novedades sobre ambientes, insumos, conectividad e instructores"],
+            ["31 – 45", "Comunicar", "Puesta en marcha del Canal Digital PCT con calendarios, guías de trámites y directorio institucional · Difusión del tablero de convocatorias"],
+            ["46 – 75", "Gestionar", "Radicación y redireccionamiento de casos por el conducto regular · Primera mesa de veeduría con Bienestar · Inicio del piloto MAI-RAD con instructores y voceros"],
+            ["76 – 90", "Evaluar", "Primera jornada «Vive tu Centro Lope» · Consulta a los aprendices sobre la efectividad de los canales · Revisión de la matriz de redireccionamiento"],
+            ["91 – 100", "Rendir cuentas", "Presentación del primer informe de gestión: casos recibidos, canalizados y resueltos · Metas alcanzadas, pendientes y próximos pasos"]
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "10",
+      "titulo": "Indicadores de gestión",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Porcentaje de voceros de todas las jornadas vinculados a la Red de Integración (meta: 99%).",
+            "Tiempo Medio de Respuesta (TMR) entre el reporte y la activación de la ruta de atención.",
+            "Índice de retención por intervención: porcentaje de aprendices o fichas que continuaron su formación tras el reporte.",
+            "Tipología de riesgo recurrente: principales motivos de deserción identificados en el Centro.",
+            "Número de solicitudes radicadas, canalizadas y resueltas con código de seguimiento.",
+            "Incremento porcentual de inscripción y permanencia en actividades de Bienestar, Formación Complementaria y Semilleros de Investigación (meta: 35%).",
+            "Número de encuentros interdisciplinarios de integración técnica por semestre (meta: 2).",
+            "Porcentaje de reportes de contingencias de insumos o instructores informados a la Coordinación Académica (meta: 100% mensual).",
+            "Número de informes de veeduría trimestrales presentados ante el Comité del Centro.",
+            "Nivel de conocimiento de la oferta institucional medido en la encuesta de la jornada «Vive tu Centro Lope»."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "11",
+      "titulo": "Transparencia y rendición de cuentas",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "La representación informará periódicamente qué solicitudes fueron recibidas, cuáles fueron canalizadas, ante qué dependencia se presentaron, qué respuesta se obtuvo y cuáles permanecen pendientes, con su estado de seguimiento."
+        },
+        {
+          "tipo": "destacado",
+          "etiqueta": "Compromiso",
+          "texto": "Cada caso tendrá trazabilidad: la representación no termina con la elección ni con la radicación de la solicitud."
+        }
+      ]
+    },
+    {
+      "numero": "12",
+      "titulo": "Límites y responsabilidades",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "La candidatura respeta las competencias institucionales. La representación no sustituye a instructores, coordinadores, Bienestar al Aprendiz, supervisores de contratos, funcionarios administrativos ni directivos."
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "No prometer beneficios que dependan de decisiones de terceros.",
+            "No presentar como decisión institucional algo que todavía sea una propuesta.",
+            "No realizar acusaciones sin evidencia.",
+            "No intervenir técnicamente en contratos o servicios que correspondan a funcionarios responsables.",
+            "No sustituir las funciones de supervisión contractual, técnica o administrativa.",
+            "Solicitar autorización para actividades, espacios, horarios, publicidad y eventos dentro del Centro.",
+            "Respetar el Reglamento del Aprendiz y las reglas específicas de la elección."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "13",
+      "titulo": "Propuesta diferencial de la candidatura",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "destacado",
+          "etiqueta": "Propuesta diferencial",
+          "texto": "Un PCT que prepara, comunica y traslada: la primera instancia operativa de resolución del Centro, con trazabilidad de cada caso."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "La diferencia de esta propuesta es que cada necesidad tendrá un canal único, un responsable y un código de seguimiento. La representación se mide por casos resueltos y por información que efectivamente llega a los aprendices."
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Puente de Comunicación Transparente (PCT) con atención 24/7.",
+            "Red de Integración de Voceros (RIV) con sesiones mensuales.",
+            "Módulo MAI-RAD con radicado RAD-2026-XXXX y semáforo de prioridad.",
+            "Tablero de códigos de alerta anti-deserción.",
+            "Programa «Vive tu Centro Lope» de feria de servicios trimestral.",
+            "Mosaico SENA: identidad, diversidad e inserción laboral.",
+            "Mesas de veeduría de apoyos alimentarios y monitoreo del calendario lectivo.",
+            "Informes trimestrales de veeduría ante el Comité del Centro."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "14",
+      "titulo": "Mensaje de campaña",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Gestión participativa, transparencia comunicativa y garantía del desarrollo integral del Aprendiz."
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Tu voz tiene conducto.",
+            "Tu solicitud tiene seguimiento.",
+            "Tu Centro también es tuyo."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "15",
+      "titulo": "Compromiso del candidato",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Me comprometo a ejercer la representación con respeto, responsabilidad, transparencia, participación e inclusión, aplicando el Reglamento del Aprendiz y el conducto regular. Escucharé las necesidades de los aprendices de todas las jornadas y sedes, canalizaré sus solicitudes ante las dependencias competentes, ejerceré veeduría sobre las condiciones de formación y bienestar, y comunicaré los avances, las dificultades y los resultados."
+        },
+        {
+          "tipo": "destacado",
+          "etiqueta": "Principios de trabajo",
+          "texto": "Escuchar antes de hablar. Consultar antes de proponer. Gestionar antes de prometer. Informar antes de concluir."
+        }
+      ]
+    },
+    {
+      "numero": "Anexo A",
+      "titulo": "Consejos estratégicos para el candidato",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "En los discursos y visitas a salones:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Usar la metodología Problema — Solución — Base Legal.",
+            "Ejemplo: «Sabemos que hay demoras con los insumos (Problema). No venimos a pelear, venimos a aplicar el Art. 7 Numeral 6 del Reglamento mediante mesas técnicas periódicas (Solución basada en norma)»."
+          ]
+        },
+        {
+          "tipo": "destacado",
+          "etiqueta": "Postura institucional",
+          "texto": "Mostrar independencia y liderazgo respetuoso. El objetivo no es el choque, sino la co-gestión propositiva."
+        }
+      ]
+    },
+    {
+      "numero": "Anexo B",
+      "titulo": "Glosario de lenguaje institucional",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Vocabulario para usar en discursos y debates:"
+        },
+        {
+          "tipo": "tabla",
+          "columnas": ["Término", "Definición"],
+          "filas": [
+            ["Formación Profesional Integral (FPI)", "El proceso teórico-práctico orientado al desarrollo de competencias en el aprendiz."],
+            ["Conducto Regular", "El orden jerárquico para resolver inquietudes o situaciones académicas y disciplinarias: Instructor → Vocero → Coordinador Académico → Subdirector."],
+            ["Etapa Lectiva y Etapa Productiva", "Las dos fases del proceso formativo del SENA."],
+            ["Ambiente de Aprendizaje", "Los talleres, laboratorios, aulas o campos de práctica donde se imparte la formación."],
+            ["SENNOVA", "Sistema de Investigación, Desarrollo Tecnológico e Innovación del SENA."],
+            ["Veeduría Estudiantil", "Ejercicio democrático, respetuoso y analítico de supervisión de los recursos y garantías de los aprendices."]
+          ]
+        }
+      ]
+    }
+  ]
+}

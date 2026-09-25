@@ -46,6 +46,67 @@ class Candidato(models.Model):
         return f"#{self.numero_tarjeton} - {self.nombre or 'CUPO DISPONIBLE'}"
 
 
+class PlanTrabajo(models.Model):
+    """Plan de trabajo de una candidatura.
+
+    El documento se guarda como una lista de **secciones estructuradas** en
+    lugar de un solo bloque de texto, porque los planes combinan párrafos,
+    listas, tablas (matriz de ejecución, cronograma) y bloques destacados
+    (compromiso, mensaje de campaña).
+
+    Formato de cada sección (ver `DOCUMENTACION_PLAN` en el comando
+    `cargar_plan_trabajo`):
+
+        {"numero": "6.1", "titulo": "...", "nivel": 2, "bloques": [...]}
+
+    Bloques admitidos:
+
+    * `{"tipo": "parrafo", "texto": "..."}`
+    * `{"tipo": "lista", "items": [...], "estilo": "vinetas" | "numeros"}`
+    * `{"tipo": "destacado", "texto": "...", "etiqueta": "..."}`
+    * `{"tipo": "secuencia", "items": [...]}`
+    * `{"tipo": "tabla", "columnas": [...], "filas": [[...], ...]}`
+    """
+
+    candidato = models.OneToOneField(
+        Candidato,
+        on_delete=models.CASCADE,
+        related_name='plan_trabajo',
+        verbose_name='Candidato',
+    )
+    titulo = models.CharField(max_length=200, verbose_name='Título del plan')
+    eslogan = models.CharField(max_length=250, blank=True, verbose_name='Eslogan de campaña')
+    lema = models.CharField(
+        max_length=250, blank=True,
+        verbose_name='Lema',
+        help_text='Frase corta que acompaña al eslogan, por ejemplo "Escuchar • Gestionar • Hacer seguimiento".',
+    )
+    vigencia = models.CharField(max_length=60, blank=True, verbose_name='Vigencia')
+    secciones = models.JSONField(
+        default=list,
+        blank=True,
+        verbose_name='Secciones del plan',
+        help_text='Lista de secciones estructuradas del documento.',
+    )
+    publicado = models.BooleanField(
+        default=True,
+        verbose_name='Publicado',
+        help_text='Si está desmarcado, el plan no se muestra en el micrositio.',
+    )
+    actualizado = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Plan de trabajo'
+        verbose_name_plural = 'Planes de trabajo'
+
+    def __str__(self):
+        return f'Plan de trabajo · {self.candidato.nombre}'
+
+    @property
+    def total_secciones(self):
+        return len(self.secciones or [])
+
+
 class Voto(models.Model):
     """Voto secreto: no se guarda a qué votante pertenece."""
     candidato = models.ForeignKey(Candidato, on_delete=models.PROTECT, related_name='votos')

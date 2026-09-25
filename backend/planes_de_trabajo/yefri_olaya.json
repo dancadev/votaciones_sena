@@ -1,0 +1,456 @@
+{
+  "titulo": "Propuesta de Candidatura a Representante de los Aprendices",
+  "eslogan": "Una representación cercana y humana",
+  "lema": "Escuchar • Gestionar • Hacer seguimiento",
+  "vigencia": "2026",
+  "resumen": "Seis líneas de trabajo con acciones a corto, mediano y largo plazo: la voz del aprendiz con buzón y formulario, bienestar y permanencia, alimentación y movilidad, participación e inclusión, información oficial y la iniciativa «¿Qué pasó con mi propuesta?» para que ninguna inquietud se pierda.",
+  "secciones": [
+    {
+      "numero": "1",
+      "titulo": "Mi propósito: una representación cercana y humana",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Ser representante de los aprendices significa para mí mucho más que ocupar un cargo. Significa escuchar, servir y convertir las necesidades de mis compañeros en oportunidades de cambio. Quiero que cada aprendiz sepa que tiene una persona cercana a quien acudir, alguien dispuesto a escuchar sus inquietudes, acompañarlo y llevar sus propuestas a los espacios donde puedan ser atendidas."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Mi propósito es construir una representación del lado de los aprendices: presente no solamente cuando exista un problema, sino también para reconocer sus ideas, sus logros y sus dificultades. Quiero ser una voz cercana, pero también un puente responsable entre los aprendices, los voceros, Bienestar al Aprendiz, los instructores, las coordinaciones y las demás instancias del Centro."
+        },
+        {
+          "tipo": "destacado",
+          "etiqueta": "Propósito",
+          "texto": "Una representación cercana, no una representación de escritorio: presente para escuchar, gestionar y hacer seguimiento."
+        }
+      ]
+    },
+    {
+      "numero": "2",
+      "titulo": "De dónde nace mi motivación",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Una de mis principales motivaciones nace de la importancia de fortalecer la diversidad, la inclusión y la participación dentro del SENA. Actualmente tengo la responsabilidad de ser vocero de la comunidad NARP (Negra, Afrocolombiana, Raizal y Palenquera), experiencia que me ha permitido comprender el valor de escuchar diferentes voces y promover espacios donde cada persona pueda sentirse reconocida y respetada."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Esta experiencia también me ha enseñado que representar no significa hablar por los demás, sino escuchar sus voces y trabajar para que sean escuchadas. Mi intención va mucho más allá de esa vocería específica: quiero representar a todos los aprendices, sin distinción, y contribuir a un SENA más participativo, diverso, incluyente y unido."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Además, como aprendiz del programa Tecnólogo en Gestión de Redes de Datos, quiero aprovechar lo que voy aprendiendo en organización de la información y manejo de herramientas digitales para que el seguimiento a las inquietudes de mis compañeros sea ordenado, claro y verificable."
+        }
+      ]
+    },
+    {
+      "numero": "3",
+      "titulo": "Mi enfoque: bienestar, acompañamiento y confianza",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Quiero que mi representación tenga un rostro humano. El bienestar de un aprendiz no se limita a recibir un beneficio; también implica sentirse escuchado, conocer las rutas y oportunidades disponibles, poder expresar una dificultad y encontrar orientación para saber a dónde acudir."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Cuando un aprendiz tenga una inquietud, una propuesta o una situación que requiera atención, mi compromiso será escucharlo con respeto, ayudar a organizar la situación, orientar hacia la instancia correspondiente cuando sea necesario y hacer seguimiento a la gestión. No pretendo sustituir a Bienestar al Aprendiz ni a los profesionales o funcionarios responsables. Mi papel será acompañar, orientar, gestionar y hacer seguimiento dentro de mis competencias."
+        }
+      ]
+    },
+    {
+      "numero": "4",
+      "titulo": "Objetivo general",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Representar de manera responsable, participativa y cercana a los aprendices del Centro Internacional de Producción Limpia Lope – CIPLL, promoviendo espacios de escucha, participación, bienestar y diálogo, y realizando gestión y seguimiento a las principales necesidades que puedan afectar su bienestar, permanencia y desarrollo durante el proceso formativo."
+        }
+      ]
+    },
+    {
+      "numero": "5",
+      "titulo": "Objetivos específicos",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "lista",
+          "estilo": "numeros",
+          "items": [
+            "Mantener un canal de comunicación cercano y organizado para recibir necesidades, propuestas, dificultades y reconocimientos de los aprendices.",
+            "Consolidar las situaciones recurrentes y presentarlas ante las instancias que tienen competencia para atenderlas.",
+            "Apoyar la divulgación de las actividades de Bienestar al Aprendiz y acompañar a quienes enfrentan situaciones que puedan afectar su permanencia.",
+            "Recoger y canalizar las observaciones sobre alimentación, refrigerios, movilidad, horarios y ambientes de formación.",
+            "Fortalecer la comunicación con los voceros y promover espacios de diálogo sobre convivencia, buen trato e inclusión.",
+            "Divulgar de manera oportuna y verificada las convocatorias, beneficios y oportunidades oficiales.",
+            "Implementar un seguimiento transparente que permita a cada aprendiz saber en qué va su caso.",
+            "Dejar documentadas recomendaciones para quien continúe la representación."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "6",
+      "titulo": "Mi metodología de trabajo",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "secuencia",
+          "items": ["Escuchar", "Gestionar", "Hacer seguimiento", "Informar"]
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Escuchar: conocer las necesidades, inquietudes, propuestas, dificultades y reconocimientos de los aprendices.",
+            "Gestionar: presentar las situaciones ante las instancias que tienen competencia para atenderlas.",
+            "Hacer seguimiento: revisar qué respuesta se recibió, qué está pendiente y cuál es el estado de cada gestión.",
+            "Informar: comunicar a los aprendices los avances, diferenciando siempre entre una gestión realizada y una solución efectivamente aprobada."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "7",
+      "titulo": "Seis líneas de trabajo: cómo las voy a llevar a la práctica",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Aquí no quiero quedarme en la intención. Para cada línea explico, en corto, mediano y largo plazo, qué acción concreta voy a realizar, con qué herramientas y de qué forma se conecta con las instancias competentes del Centro."
+        }
+      ]
+    },
+    {
+      "numero": "7.1",
+      "titulo": "Línea 1 — La voz del aprendiz",
+      "proyecto": "La voz del aprendiz",
+      "nivel": 2,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Mantendré un canal de comunicación cercano y organizado para recibir necesidades, propuestas, dificultades y reconocimientos, y consolidaré las situaciones recurrentes para presentarlas ante quien corresponda."
+        },
+        {
+          "tipo": "tabla",
+          "columnas": ["Plazo", "Acción concreta"],
+          "filas": [
+            ["Corto plazo (primer mes)", "Habilitar un buzón físico sencillo en un punto visible del Centro y, en paralelo, un formulario digital corto (por ejemplo Google Forms), compartido a través de los voceros y grupos de WhatsApp, donde cualquier aprendiz pueda escribir su inquietud, propuesta o reconocimiento, con opción de hacerlo de forma anónima."],
+            ["Mediano plazo (revisión periódica)", "Revisar el buzón y el formulario de manera periódica —una fecha fija cada mes, por ejemplo la primera semana—, clasificar lo recibido por temas (bienestar, alimentación, convivencia, académico, ambientes de formación) y llevar los temas recurrentes o de interés colectivo a la instancia correspondiente."],
+            ["Largo plazo (todo el periodo)", "Llevar un cuadro de seguimiento sencillo (hoja de cálculo) con cada inquietud recibida, la fecha, a quién se llevó, la respuesta obtenida y el estado, para poder mostrarle a cualquier aprendiz, en cualquier momento, en qué va su caso."]
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "7.2",
+      "titulo": "Línea 2 — Bienestar, permanencia y desarrollo humano",
+      "proyecto": "Bienestar y permanencia",
+      "nivel": 2,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Apoyaré la divulgación de las actividades de Bienestar al Aprendiz y estaré atento a situaciones que puedan afectar la permanencia de un compañero en su proceso formativo."
+        },
+        {
+          "tipo": "tabla",
+          "columnas": ["Plazo", "Acción concreta"],
+          "filas": [
+            ["Corto plazo", "Coordinar con Bienestar al Aprendiz cuáles son los canales oficiales de información, y crear un espacio (grupo o canal con los voceros) donde replicar de inmediato las actividades deportivas, culturales, recreativas y de desarrollo humano que se vayan publicando."],
+            ["Mediano plazo", "Cuando un compañero me cuente una dificultad que pueda afectar su permanencia, acompañarlo escuchándolo con calma, ayudarle a entender cuál es la ruta institucional correcta y orientarlo para que la use, sin sustituir nunca a los profesionales responsables."],
+            ["Largo plazo", "Construir, junto con los voceros, una guía breve y clara tipo «¿A quién acudo si...?» con los contactos y rutas de Bienestar, para que cualquier aprendiz sepa rápidamente dónde buscar ayuda, incluso cuando yo no esté disponible en ese momento."]
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "7.3",
+      "titulo": "Línea 3 — Alimentación, movilidad y condiciones para aprender",
+      "proyecto": "Condiciones para aprender",
+      "nivel": 2,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Recogeré observaciones sobre alimentación o refrigerios, dificultades de rutas y horarios, y situaciones de los ambientes de formación, para llevarlas de forma organizada a quien pueda resolverlas."
+        },
+        {
+          "tipo": "tabla",
+          "columnas": ["Plazo", "Acción concreta"],
+          "filas": [
+            ["Corto plazo", "Usar el mismo buzón y formulario de la Línea 1 para identificar, desde el primer mes, las observaciones puntuales sobre refrigerios, rutas, horarios y ambientes de formación."],
+            ["Mediano plazo", "Organizar esas observaciones en un documento breve y concreto (un pequeño diagnóstico con casos y frecuencia) y entregarlo a la coordinación o al área responsable, explicando la situación tal como la viven los aprendices."],
+            ["Largo plazo", "Hacer seguimiento a lo entregado y contarles a los aprendices, con honestidad, qué se resolvió, qué sigue en trámite y qué no depende de la gestión del representante, para no generar falsas expectativas."]
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "7.4",
+      "titulo": "Línea 4 — Participación, convivencia e inclusión",
+      "proyecto": "Participación e inclusión",
+      "nivel": 2,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Fortaleceré la comunicación con los voceros y promoveré espacios de diálogo donde se escuchen las necesidades de los diferentes grupos y poblaciones del Centro."
+        },
+        {
+          "tipo": "tabla",
+          "columnas": ["Plazo", "Acción concreta"],
+          "filas": [
+            ["Corto plazo", "Organizar una primera reunión (presencial o virtual) con los voceros de ficha para presentarme, escuchar sus expectativas y acordar juntos cómo nos vamos a comunicar durante el periodo."],
+            ["Mediano plazo", "Sostener espacios de diálogo periódicos con voceros y aprendices interesados para conversar sobre convivencia, buen trato e inclusión, dando espacio también a las necesidades de poblaciones específicas, como la comunidad NARP y otros grupos del Centro."],
+            ["Largo plazo", "Consolidar una relación de confianza real con los voceros, para que la comunicación funcione de manera constante y no solo aparezca cuando ya existe un problema o una crisis."]
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "7.5",
+      "titulo": "Línea 5 — Información y oportunidades",
+      "proyecto": "Información y oportunidades",
+      "nivel": 2,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Apoyaré la divulgación oportuna de convocatorias, beneficios, empleo, emprendimiento, formación y demás oportunidades oficiales que lleguen al representante."
+        },
+        {
+          "tipo": "tabla",
+          "columnas": ["Plazo", "Acción concreta"],
+          "filas": [
+            ["Corto plazo", "Identificar y confirmar con las instancias correspondientes cuáles son los canales oficiales de convocatorias y oportunidades, para no depender de rumores ni de fuentes no verificadas."],
+            ["Mediano plazo", "Compartir esa información apenas se publique, de forma clara y en el mismo canal que uso con los voceros, aclarando siempre que se trata de información oficial y remitiendo a los canales institucionales para inscripciones o dudas puntuales."],
+            ["Largo plazo", "Mantener el hábito de verificar antes de compartir, y aclarar con respeto cualquier información que circule sin confirmar entre los aprendices, remitiendo siempre a la fuente oficial del Centro."]
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "7.6",
+      "titulo": "Línea 6 — Seguimiento y transparencia",
+      "proyecto": "¿Qué pasó con mi propuesta?",
+      "nivel": 2,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Implementaré la iniciativa «¿Qué pasó con mi propuesta?», para que ninguna inquietud se pierda después de ser expresada."
+        },
+        {
+          "tipo": "tabla",
+          "columnas": ["Plazo", "Acción concreta"],
+          "filas": [
+            ["Corto plazo", "Diseñar una plantilla sencilla de seguimiento (necesidad, fecha, gestión realizada, instancia responsable, respuesta recibida, estado), apoyándome en lo que voy aprendiendo en mi formación como Tecnólogo en Gestión de Redes de Datos para mantenerla ordenada y de fácil consulta."],
+            ["Mediano plazo", "Actualizar esa plantilla de forma periódica con lo que se ha gestionado, revisando qué respondió cada instancia y qué sigue pendiente."],
+            ["Largo plazo", "Compartir con los aprendices, de manera periódica y no solo al final del periodo, un resumen breve y honesto de los avances, diferenciando siempre entre «ya se gestionó ante la instancia» y «ya se resolvió efectivamente»."]
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "8",
+      "titulo": "Una representación que no deja solas las inquietudes",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "destacado",
+          "etiqueta": "Iniciativa",
+          "texto": "«Una ficha, una voz»: cada vocero podrá transmitir una necesidad, una propuesta o un reconocimiento de su grupo de formación."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Propongo fortalecer la relación con los voceros mediante «Una ficha, una voz»: cada vocero podrá transmitir una necesidad, una propuesta o un reconocimiento de su grupo de formación. Esto me permitirá identificar situaciones comunes, priorizar necesidades y llevarlas de manera organizada a las instancias correspondientes."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Mi compromiso será que escuchar no sea simplemente recibir un mensaje. Escuchar tendrá que convertirse en una gestión responsable y, cuando corresponda, en seguimiento e información de regreso."
+        }
+      ]
+    },
+    {
+      "numero": "9",
+      "titulo": "Plan de trabajo, en el tiempo",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "columnas": ["Horizonte", "Etapa", "Acciones"],
+          "filas": [
+            ["Corto plazo — primeros meses", "Escuchar y diagnosticar", "Poner en marcha el buzón y el formulario · Establecer comunicación directa con los voceros · Recoger las primeras propuestas · Identificar las situaciones más recurrentes del Centro"],
+            ["Mediano plazo — meses intermedios", "Gestionar y hacer seguimiento", "Presentar las principales necesidades ante las instancias correspondientes · Participar en los espacios institucionales donde se puedan atender · Empezar a informar a los aprendices sobre los primeros avances"],
+            ["Largo plazo — cierre del periodo", "Evaluar y entregar resultados", "Revisar el estado general de las solicitudes · Identificar qué avanzó y qué quedó pendiente · Presentar un informe final claro · Dejar documentadas recomendaciones para quien continúe la representación"]
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "A futuro, quiero que esta forma de representar deje una base organizada para quienes continúen el proceso: una cultura de escucha, seguimiento, transparencia y participación que pueda mantenerse más allá de un solo periodo."
+        }
+      ]
+    },
+    {
+      "numero": "10",
+      "titulo": "Matriz de ejecución",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Cada línea de trabajo tiene definida su herramienta, su plazo y su evidencia."
+        },
+        {
+          "tipo": "tabla",
+          "columnas": ["Línea", "Herramienta", "Plazo", "Evidencia"],
+          "filas": [
+            ["1. La voz del aprendiz", "Buzón físico y formulario digital con opción anónima", "Primer mes y revisión mensual", "Formulario activo y registro de lo recibido"],
+            ["2. Bienestar y permanencia", "Canal con voceros y guía «¿A quién acudo si...?»", "Corto y largo plazo", "Guía publicada y actividades replicadas"],
+            ["3. Condiciones para aprender", "Diagnóstico breve con casos y frecuencia", "Mediano plazo", "Documento entregado a la instancia responsable"],
+            ["4. Participación e inclusión", "Reuniones periódicas con voceros y espacios de diálogo", "Primer mes y de forma continua", "Actas y registro de reuniones"],
+            ["5. Información y oportunidades", "Canal verificado de convocatorias oficiales", "Permanente", "Información publicada y fuente oficial citada"],
+            ["6. Seguimiento y transparencia", "Plantilla y cuadro de seguimiento «¿Qué pasó con mi propuesta?»", "Todo el periodo", "Cuadro actualizado y consultable"],
+            ["Transversal", "Informe final con recomendaciones", "Cierre del periodo", "Informe entregado"]
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "11",
+      "titulo": "Cómo vamos a saber que esto se está cumpliendo",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Más que números o cifras, lo que le propongo a los aprendices es una forma constante y verificable de trabajar. Así van a poder comprobar, en cualquier momento del periodo, que esta representación está activa:"
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "El buzón y el formulario estarán siempre disponibles y se revisarán en fechas fijas, no solo cuando surja un problema.",
+            "El cuadro de seguimiento estará actualizado y podrá mostrarse a quien lo pida, con el estado real de cada gestión.",
+            "Los espacios de diálogo con los voceros se sostendrán durante todo el periodo, no solo al inicio.",
+            "La información de Bienestar y de oportunidades oficiales se compartirá de manera oportuna y verificada.",
+            "Los avances se comunicarán de forma periódica y honesta, distinguiendo entre lo gestionado y lo efectivamente resuelto.",
+            "Al cierre del periodo se entregará un informe final con recomendaciones para quien continúe la representación."
+          ]
+        },
+        {
+          "tipo": "destacado",
+          "etiqueta": "Compromiso con el propio proceso",
+          "texto": "Estas acciones buscan ser realistas y compatibles con mi principal responsabilidad: continuar cumpliendo de manera responsable mi propio proceso de formación como Tecnólogo en Gestión de Redes de Datos."
+        }
+      ]
+    },
+    {
+      "numero": "12",
+      "titulo": "Mis compromisos con los aprendices",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Escuchar sus necesidades.",
+            "Mantener comunicación con los voceros.",
+            "Recibir y consolidar propuestas colectivas.",
+            "Presentar las necesidades ante las instancias competentes.",
+            "Hacer seguimiento a las principales gestiones.",
+            "Informar sobre las respuestas recibidas.",
+            "Apoyar la divulgación de las actividades de Bienestar al Aprendiz.",
+            "Promover la participación de los aprendices.",
+            "Promover el respeto, la convivencia y la inclusión.",
+            "Apoyar la divulgación de oportunidades y convocatorias oficiales.",
+            "Mantener transparencia sobre las gestiones realizadas.",
+            "Presentar informes de gestión durante el periodo de representación."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "13",
+      "titulo": "Lo que no prometo; lo que sí asumo",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "destacado",
+          "etiqueta": "No prometo",
+          "texto": "NO PROMETO lo que no está dentro de mis competencias. No prometo crear nuevas rutas de transporte, aumentar cupos de alimentación, modificar contratos, entregar ayudas económicas, comprar equipos, construir o remodelar ambientes, garantizar la aprobación de una solicitud ni resolver personalmente situaciones que corresponden a otras áreas."
+        },
+        {
+          "tipo": "destacado",
+          "etiqueta": "Sí asumo",
+          "texto": "SÍ PROMETO escuchar, organizar, gestionar ante quienes tienen la competencia, hacer seguimiento e informar los resultados. Una representación responsable también consiste en reconocer sus límites y cumplir aquello que realmente puede hacer."
+        }
+      ]
+    },
+    {
+      "numero": "14",
+      "titulo": "Propuesta diferencial de la candidatura",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "destacado",
+          "etiqueta": "Propuesta diferencial",
+          "texto": "Cada inquietud tendrá respuesta: «¿Qué pasó con mi propuesta?» es un compromiso de seguimiento verificable, no un eslogan."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "La diferencia de esta propuesta es la trazabilidad. Cada necesidad recibida queda registrada con su fecha, la instancia a la que se llevó, la respuesta obtenida y su estado, y puede mostrarse a cualquier aprendiz que pregunte por su caso. A eso se suma una red de voceros activa y la experiencia de la vocería de la comunidad NARP, que aporta una mirada de inclusión y diversidad a la representación."
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Buzón físico y formulario digital con opción anónima.",
+            "Cuadro de seguimiento abierto a consulta de los aprendices.",
+            "Iniciativa «¿Qué pasó con mi propuesta?».",
+            "Estrategia «Una ficha, una voz» con los voceros.",
+            "Guía «¿A quién acudo si...?» con rutas y contactos de Bienestar.",
+            "Información oficial verificada antes de compartirla.",
+            "Informe final con recomendaciones para quien continúe."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "15",
+      "titulo": "Mensaje de campaña",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Mi compromiso no es prometerlo todo. Es hacer bien lo que sí puedo hacer."
+        },
+        {
+          "tipo": "lista",
+          "estilo": "vinetas",
+          "items": [
+            "Representar no es hablar por los demás: es escuchar sus voces y trabajar para que sean escuchadas.",
+            "El bienestar también comienza cuando un aprendiz siente que no está solo y que su voz importa.",
+            "Representar no es prometerlo todo. Es trabajar responsablemente por lo que sí podemos construir juntos."
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "16",
+      "titulo": "Mi compromiso final",
+      "nivel": 1,
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Quiero ser un representante cercano, no un representante de escritorio. Quiero que los aprendices sepan que pueden acercarse, ser escuchados y encontrar en mí una persona dispuesta a acompañarlos dentro de mis posibilidades y competencias."
+        },
+        {
+          "tipo": "parrafo",
+          "texto": "Quiero representar con propósito, compromiso y resultados. Quiero escuchar lo que viven mis compañeros, organizar sus propuestas, gestionar ante las instancias correspondientes, hacer seguimiento e informar."
+        },
+        {
+          "tipo": "destacado",
+          "etiqueta": "Lema",
+          "texto": "Escuchar • Gestionar • Hacer seguimiento."
+        }
+      ]
+    }
+  ]
+}

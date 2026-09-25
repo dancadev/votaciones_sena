@@ -15,6 +15,7 @@ separado se marca a la persona como "ya votó" para impedir el doble voto.
 
 from django.db import transaction
 from django.db.models import Count
+from django.http import HttpResponse
 from django.utils import timezone
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
@@ -24,9 +25,14 @@ from rest_framework.response import Response
 from apps.votantes import tokens
 from apps.votantes.models import Votante
 
+from . import reportes
 from .models import Candidato, EstadoElectoral, Voto
 from .permissions import EsAdministrador
-from .serializers import CandidatoSerializer, EstadoElectoralSerializer
+from .serializers import (
+    CandidatoSerializer,
+    EstadoElectoralSerializer,
+    PlanTrabajoSerializer,
+)
 
 
 # --------------------------------------------------------------------------- #
@@ -151,6 +157,31 @@ def detalle_candidato(request, candidato_id):
 
     serializer = CandidatoSerializer(candidato, context={'request': request})
     return Response({'candidato': serializer.data})
+
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def plan_trabajo_candidato(request, candidato_id):
+    """Plan de trabajo del candidato, con sus secciones estructuradas.
+
+    Siempre disponible, igual que las propuestas: forma parte de la
+    documentación pública de la candidatura.
+    """
+    candidato = Candidato.objects.filter(id=candidato_id, activo=True, es_voto_blanco=False).first()
+    if candidato is None:
+        return Response({'error': 'Candidato no encontrado'}, status=status.HTTP_404_NOT_FOUND)
+
+    plan = getattr(candidato, 'plan_trabajo', None)
+    if plan is None or not plan.publicado:
+        return Response(
+            {
+                'error': 'Este candidato aún no ha publicado su plan de trabajo',
+                'candidato': CandidatoSerializer(candidato, context={'request': request}).data,
+            },
+            status=status.HTTP_404_NOT_FOUND,
+        )
+
+    return Response({'plan': PlanTrabajoSerializer(plan, context={'request': request}).data})
 
 
 @api_view(['GET'])
@@ -353,3 +384,26 @@ def reabrir_jornada(request):
     estado.fecha_cierre = None
     estado.save(update_fields=['is_activa', 'resultados_publicos', 'fecha_cierre'])
     return Response({'mensaje': 'Jornada reabierta', **datos_estado_publico(estado)})
+
+
+@api_view(['GET'])
+@permission_classes([EsAdministrador])
+def resultados_pdf(request):
+    """Descarga el acta de resultados en PDF (solo administrador).
+
+    Está disponible en cualquier momento de la jornada, incluso antes de
+    publicar los resultados a los votantes: el documento lo advierte en sus
+    notas al pie.
+    """
+    try:
+        contenido = reportes.construir_pdf_resultados()
+    except Exception as error:  # noqa: BLE001 - se informa al cliente sin romper la API
+        return Response(
+            {'error': f'No se pudo generar el PDF de resultados: {error}'},
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+        )
+
+    respuesta = HttpResponse(contenido, content_type='application/pdf')
+    respuesta['Content-Disposition'] = f'attachment; filename="{reportes.nombre_archivo()}"'
+    respuesta['Content-Length'] = len(contenido)
+    return respuesta

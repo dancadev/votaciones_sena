@@ -7,6 +7,7 @@ import { CandidatoDetallePage } from './pages/CandidatoDetallePage';
 import { InicioPage } from './pages/InicioPage';
 import { LoginAdminPage } from './pages/LoginAdminPage';
 import { MonitorRealTimePage } from './pages/MonitorRealTimePage';
+import { PlanTrabajoCandidatoPage } from './pages/PlanTrabajoCandidatoPage';
 import { PropuestasPage } from './pages/PropuestasPage';
 import { RegistroIngresoPage } from './pages/RegistroIngresoPage';
 import { ResultadosElectoralesPage } from './pages/ResultadosElectoralesPage';
@@ -32,6 +33,7 @@ function App() {
               <Route path="/" element={<InicioPage />} />
               <Route path="/propuestas" element={<PropuestasPage />} />
               <Route path="/propuestas/:id" element={<CandidatoDetallePage />} />
+              <Route path="/propuestas/:id/plan" element={<PlanTrabajoCandidatoPage />} />
 
               {/* Votante: la propia cabina valida la cédula */}
               <Route path="/cabina" element={<CabinaVotacionPage />} />

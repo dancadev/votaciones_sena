@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ArrowLeft, CircleUserRound, Vote } from 'lucide-react';
+import { ArrowLeft, CircleUserRound, FileText, Vote } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
 import { useEstadoJornada } from '../hooks/useEstadoJornada';
-import { getCandidato } from '../services/api';
+import { getCandidato, getPlanTrabajo } from '../services/api';
 import { getFotoUrl } from '../utils/candidatos';
 
 /**
@@ -19,6 +19,7 @@ export const CandidatoDetallePage = () => {
   const { jornadaActiva, estado } = useEstadoJornada();
 
   const [candidato, setCandidato] = useState(null);
+  const [plan, setPlan] = useState(null);
   const [cargando, setCargando] = useState(true);
   const [errorCarga, setErrorCarga] = useState(null);
 
@@ -28,6 +29,19 @@ export const CandidatoDetallePage = () => {
     try {
       const { data } = await getCandidato(id);
       setCandidato(data.candidato);
+
+      // El plan es opcional: si el candidato aún no lo publicó, el perfil se
+      // muestra igual sin la sección del documento.
+      if (data.candidato.tiene_plan_trabajo) {
+        try {
+          const respuestaPlan = await getPlanTrabajo(id);
+          setPlan(respuestaPlan.data.plan);
+        } catch {
+          setPlan(null);
+        }
+      } else {
+        setPlan(null);
+      }
     } catch (err) {
       setErrorCarga(
         err.response?.status === 404
@@ -70,6 +84,12 @@ export const CandidatoDetallePage = () => {
   }
 
   const propuesta = candidato.propuesta?.trim();
+
+  // Las subsecciones de "Ejes y proyectos" son los pilares del programa: dan
+  // una vista rápida de la propuesta antes de abrir el documento completo.
+  const pilares = (plan?.secciones ?? [])
+    .filter((seccion) => (seccion.nivel ?? 1) > 1 && seccion.proyecto)
+    .slice(0, 4);
 
   return (
     <div className="min-h-screen bg-sena-bg py-8 px-4 sm:px-8">
@@ -125,9 +145,70 @@ export const CandidatoDetallePage = () => {
               </div>
             ) : (
               <p className="mt-4 text-sm italic text-slate-400">
-                Este candidato aún no ha registrado su propuesta.
+                Este candidato aún no ha registrado una propuesta resumida.
               </p>
             )}
+
+            {/* Los pilares que estructuran el programa de este candidato */}
+            {pilares.length > 0 && (
+              <div className="mt-6">
+                <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                  {pilares.length === 1 ? 'Pilar del programa' : 'Pilares del programa'}
+                </h3>
+                <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                  {pilares.map((pilar) => (
+                    <div
+                      key={pilar.numero}
+                      className="rounded-xl border border-slate-200 bg-sena-bg p-4"
+                    >
+                      <p className="text-xs font-bold uppercase tracking-wide text-sena-green">
+                        {pilar.numero}
+                      </p>
+                      <p className="mt-1 font-semibold leading-snug text-sena-navy">
+                        {pilar.titulo}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Plan de trabajo: la plantilla que siguen todos los candidatos */}
+            <div className="mt-6 rounded-2xl border border-slate-200 p-5">
+              {candidato.tiene_plan_trabajo ? (
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex items-start gap-3">
+                    <FileText className="mt-0.5 h-5 w-5 shrink-0 text-sena-blue" />
+                    <div>
+                      <p className="font-bold text-sena-navy">Plan de trabajo</p>
+                      <p className="text-sm text-slate-600">
+                        Documento completo: ejes, proyectos, matriz de ejecución, cronograma e
+                        indicadores.
+                      </p>
+                    </div>
+                  </div>
+                  <Link
+                    to={`/propuestas/${candidato.id}/plan`}
+                    className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-sena-blue px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  >
+                    <FileText className="h-4 w-4" />
+                    Ver plan de trabajo
+                  </Link>
+                </div>
+              ) : (
+                <div className="flex items-start gap-3">
+                  <FileText className="mt-0.5 h-5 w-5 shrink-0 text-slate-400" />
+                  <div>
+                    <p className="font-bold text-slate-500">Plan de trabajo</p>
+                    <p className="text-sm text-slate-500">
+                      Este candidato todavía no ha publicado su plan de trabajo. La estructura del
+                      documento es la misma que la del plan de Jhonatan Arcos, disponible como
+                      plantilla.
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* Cómo votar por este candidato */}
             <div className="mt-8 rounded-2xl border border-slate-200 bg-sena-bg p-5">
